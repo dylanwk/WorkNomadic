@@ -3,10 +3,7 @@
 @tailwind utilities;
 
 
-body {
-  padding: 1.5rem;
-  
-}
+
 
 .input::placeholder {
   font-style: italic;
@@ -15,5 +12,16 @@ body {
 
 h1 {
   font-size: 40px;
+}
+
+header img {
+ 
+  display: flex;
+  position: relative;
+  height: 91px;
+  object-fit: contain;
+  width: 100%;
+  max-width: 100px;
+
 }
 

@@ -19,7 +19,7 @@ const UserPage = async() => {
         <div className="card lg:card-side bg-base-100 shadow-xl">
 
           <figure className='relative w-full max-w-[300px] min-w-[230px]'>
-            <Image src={imageUrl} fill alt={'destination'}></Image>
+            <Image src={imageUrl} fill alt={'destination'} loading='lazy'></Image>
           </figure>
 
           <div className="card-body">
