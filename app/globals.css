@@ -5,5 +5,15 @@
 
 body {
   padding: 1.5rem;
+  
+}
+
+.input::placeholder {
+  font-style: italic;
+  font-size: smaller;
+}
+
+h1 {
+  font-size: 40px;
 }
 

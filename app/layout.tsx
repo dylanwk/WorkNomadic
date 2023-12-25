@@ -16,7 +16,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <head>
+      <img src='/icon.png'></img>
+    <link rel="icon" href="/icon.png" sizes="any" />
+    </head>
+      <body className={inter.className}>
+      <div className="flex flex-col items-center">
+        <div className="max-w-screen-md min-h-[100vh] w-full flex flex-col">
+
+            
+
+          {children}
+
+          
+        </div>
+      </div>
+      </body>
     </html>
   )
 }
