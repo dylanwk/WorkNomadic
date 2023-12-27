@@ -9,34 +9,35 @@ import QuestionForm, {
 } from "@/app/components/Question";
 import { useState } from "react";
 import Page from "./success-page/page";
+import { exportData } from "@/app/utils/exportData";
 
 const Home: React.FC = () => {
   const questions: Question[] = [
-    { id: "question1", 
+    { id: "Current Location", 
       label: "Current Location 🌎", 
       type: "open-ended",
       description: "example: US" 
     },
     {
-      id: "question2",
+      id: "Region Preference",
       label: "Which do you perfer? ",
       type: "multiple-choice",
       options: ["Oceania 🏄‍♂️", "South America 🌴", "Europe 🇪🇺", "North America 🌲", "Aisa ⛩", "Africa 🦒", "Middle East 🐪"],
     },
     {
-      id: "question3",
+      id: "Must Have",
       label: "A must-need for your trip?",
       type: "open-ended",
       description: "ex: coffee shops, bars, etc."
     },
     {
-      id: "question4",
+      id: "Activity Present",
       label: "What activity do you enjoy?",
       type: "open-ended",
       description: "ex: surfing, hiking, nightlife, etc."
     },
     {
-      id: "question5",
+      id: "Plant Tikcet budget one way",
       label: "Plane Ticket budget (one way) ✈️",
       type: "multiple-choice",
       options: ["<300", "400", ">500"],
@@ -47,8 +48,7 @@ const Home: React.FC = () => {
 
   const handleFormSubmit = async (userResponses: UserResponses) => {
     try {
-      // handle user data here
-      console.log(userResponses);
+      console.log(0);
       setSubmitted(true);
     } catch (error) {
       console.error("Error:", error);

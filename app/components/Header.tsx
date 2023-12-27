@@ -45,7 +45,7 @@ const Header = () => {
         <div className="navbar-center">
           <a href="/" className="">
             <div className="">
-              <img src="icon.png" alt="logo" />
+              <img src="/images/icon.png" alt="logo" />
             </div>
           </a>
         </div>

@@ -3,6 +3,7 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import { exportData } from "../utils/exportData";
 
 type Question = {
   id: string;
@@ -11,6 +12,7 @@ type Question = {
   options?: string[];
   description?: string;
 };
+
 
 type UserResponses = Record<string, string | number>;
 
@@ -34,8 +36,8 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ questions, onSubmit }) => {
     if (currentQuestionIndex < questions.length - 1) {
       handleNextQuestion();
     } else {
-      onSubmit(userResponses);
-      console.log("0");
+      onSubmit(userResponses); // question responses sent to page.tsx
+      exportData(questions, userResponses); // data exported to exportData.tsx
     }
   };
 
@@ -109,4 +111,4 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ questions, onSubmit }) => {
 
 export default QuestionForm;
 export type { Question };
-export type { UserResponses };
+export type { UserResponses};
