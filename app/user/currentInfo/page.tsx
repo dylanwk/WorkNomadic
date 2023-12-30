@@ -11,7 +11,11 @@ import { useState } from "react";
 import Page from "./success-page/page";
 import { exportData } from "@/app/utils/exportData";
 
-const Home: React.FC = () => {
+interface ParentProps {
+  userResponses: UserResponses
+}
+
+const Home: React.FC<ParentProps> = ({ userResponses }) => {
   const questions: Question[] = [
     { id: "Current Location", 
       label: "Current Location 🌎", 
@@ -48,8 +52,8 @@ const Home: React.FC = () => {
 
   const handleFormSubmit = async (userResponses: UserResponses) => {
     try {
-      console.log(0);
       setSubmitted(true);
+      exportData(questions, userResponses)
     } catch (error) {
       console.error("Error:", error);
     }
@@ -58,7 +62,7 @@ const Home: React.FC = () => {
   return (
     <div>
       {submitted ? (
-        <Page />
+        <Page userResponses={userResponses} />
       ) : (
         <QuestionForm questions={questions} onSubmit={handleFormSubmit} />
       )}

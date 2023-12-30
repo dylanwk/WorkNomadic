@@ -16,7 +16,7 @@ const UserPage = async() => {
   return (
     
     <div className="flex flex-col gap-4">
-        <div className="card lg:card-side bg-base-100 shadow-xl">
+        <div className="card lg:card-side bg-base-200 shadow-xl">
 
           <figure className='relative w-full max-w-[300px] min-w-[230px]'>
             <Image src={imageUrl} fill alt={'destination'} loading='lazy'></Image>
@@ -33,7 +33,7 @@ const UserPage = async() => {
           </div>
         </div>
 
-        <div className="card lg:card-side bg-base-100 shadow-xl">
+        <div className="card lg:card-side bg-base-200 shadow-xl">
 
           <figure className='relative w-full max-w-[300px] min-w-[230px]'>
             <Image src={imageUrl} fill alt={'destination'}></Image>
@@ -50,7 +50,7 @@ const UserPage = async() => {
           </div>
           </div>
 
-          <div className="card lg:card-side bg-base-100 shadow-xl">
+          <div className="card lg:card-side bg-base-200 shadow-xl">
 
           <figure className='relative w-full max-w-[300px] min-w-[230px]'>
             <Image src={imageUrl} fill alt={'destination'}></Image>
