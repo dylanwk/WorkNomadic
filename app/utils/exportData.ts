@@ -18,8 +18,7 @@ let textPrompt =
 
 export const exportData = async (questions: Question[], responses: UserResponses) => {
     for (const key in responses) {
-        textPrompt += `${key}: ${responses[key]}
-        `
+        textPrompt += `${key}: ${responses[key]}/n`
     }
     //console.log(textPrompt);
     const response = openai.chat.completions.create({

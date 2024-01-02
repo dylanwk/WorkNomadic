@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <header className="p-5 rounded">
-      <div className="navbar shadow-xl rounded-3xl bg-base-100">
+      <div className="navbar shadow-xl bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <div
@@ -31,13 +31,16 @@ const Header = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Homepage</a>
+                <a href="/">Homepage</a>
               </li>
               <li>
-                <a>Email List</a>
+                <a href="/joinNomadPage">Email List</a>
               </li>
               <li>
-                <a>About</a>
+                <a href='/nomadInsights'>Nomad Page Insights</a>
+              </li>
+              <li>
+                <a href='/about'>About Us</a>
               </li>
             </ul>
           </div>

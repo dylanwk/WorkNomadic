@@ -13,7 +13,6 @@ type Question = {
   description?: string;
 };
 
-
 type UserResponses = Record<string, string | number>;
 
 interface QuestionFormProps {
@@ -50,57 +49,58 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ questions, onSubmit }) => {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className="flex flex-col gap-4">
-        <div className="card bg-base-100 shadow-xl">
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content text-center">
           <form onSubmit={handleSubmit}>
-            <div className="card-body pb-7">
+            <div className="max-w-lg">
               <label>
-                <h2 className="card-title p-6 text-3xl justify-center">
+                <h1 className="text-5xl font-bold py-3">
                   {currentQuestion.label}
-                </h2>
+                </h1>
                 {currentQuestion.type === "open-ended" ? (
-                  <div className="flex justify-center">
-                  <input
-                    type="text"
-                    placeholder={currentQuestion.description}
-                    className="input input-bordered input-primary w-full max-w-xs"
-                    value={userResponses[currentQuestion.id] || ""}
-                    onChange={(e) => handleOpenEndedChange(e.target.value)}
-                    required
-                  />
+                  <div className="flex justify-center p-3">
+                    <input
+                      type="text"
+                      placeholder={currentQuestion.description}
+                      className="input input-bordered input-primary w-full max-w-xs"
+                      value={userResponses[currentQuestion.id] || ""}
+                      onChange={(e) => handleOpenEndedChange(e.target.value)}
+                      required
+                    />
                   </div>
                 ) : currentQuestion.type === "multiple-choice" ? (
-                  <div className="flex justify-center">
-                  <select
-                    className="select select-primary w-full max-w-xs"
-                    value={userResponses[currentQuestion.id] || ""}
-                    onChange={(e) =>
-                      setUserResponses({
-                        ...userResponses,
-                        [currentQuestion.id]: e.target.value,
-                      })
-                    }
-                    required
-                  >
-                    <option value="" disabled>
-                      Select an option
-                    </option>
-                    {currentQuestion.options?.map((option) => (
-                      <option key={option} value={option}>
-                        {option}
+                  <div className="flex justify-center p-3">
+                    <select
+                      className="select select-primary w-full max-w-xs"
+                      value={userResponses[currentQuestion.id] || ""}
+                      onChange={(e) =>
+                        setUserResponses({
+                          ...userResponses,
+                          [currentQuestion.id]: e.target.value,
+                        })
+                      }
+                      required
+                    >
+                      <option value="" disabled>
+                        Select an option
                       </option>
-                    ))}
-                  </select>
+                      {currentQuestion.options?.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 ) : null}
               </label>
-            </div>
-            <div className="card-actions justify-center pb-6">
+              <div className="p-2" >
               <button type="submit" className="btn btn-primary">
                 {currentQuestionIndex < questions.length - 1
                   ? "Next Question"
                   : "Get Recommendation"}
               </button>
+              </div>
+              <div className="p-7"/>
             </div>
           </form>
         </div>
@@ -111,4 +111,18 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ questions, onSubmit }) => {
 
 export default QuestionForm;
 export type { Question };
-export type { UserResponses};
+export type { UserResponses };
+
+/*- 
+
+<div className="hero min-h-screen bg-base-200">
+  <div className="hero-content text-center">
+    <div className="max-w-md">
+      <h1 className="text-5xl font-bold">Hello there</h1>
+      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      <button className="btn btn-primary">Get Started</button>
+    </div>
+  </div>
+</div>
+
+-*/
