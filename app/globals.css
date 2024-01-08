@@ -4,6 +4,13 @@
 
 
 
+@font-face {
+  font-family: '';
+  src: url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@600&display=swap'); 
+  /* Add additional font formats if needed */
+  font-family: 'League Spartan', sans-serif;
+}
+
 
 .input::placeholder {
   font-style: italic;
@@ -18,10 +25,10 @@ header img {
  
   display: flex;
   position: relative;
-  height: 91px;
+  height: 75px;
   object-fit: contain;
   width: 100%;
-  max-width: 100px;
+  
 
 }
 

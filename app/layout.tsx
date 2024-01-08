@@ -24,17 +24,13 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head> 
 
-      <body className={inter.className}>
+      <body data-theme='corporate' className={inter.className}>
         <Header />
 
-        <div className="p-4"></div>
+        <div className="p-4 bg-base-200"></div>
 
-        <div className="flex flex-col items-center">
-          <div className="max-w-screen-md min-h-[100vh] w-full flex flex-col">
-            {children}
-          </div>
-        </div>
-        <div className="p-4"></div>
+          {children}
+        <div className="p-4 bg-base-200"></div>
       </body>
     </html>
   );
