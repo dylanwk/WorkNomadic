@@ -1,5 +1,3 @@
-// currentInfo/page.tsx
-
 "use client";
 
 import React from "react";
@@ -8,8 +6,8 @@ import QuestionForm, {
   UserResponses,
 } from "@/app/components/Question";
 import { useState } from "react";
-import Page from "./success-page/page";
-import { exportData } from "@/app/utils/exportData";
+import SuccessPage from "./success-page/page";
+//import { exportData } from "@/app/utils/exportData";
 
 interface ParentProps {
   userResponses: UserResponses
@@ -53,7 +51,7 @@ const Home: React.FC<ParentProps> = ({ userResponses }) => {
   const handleFormSubmit = async (userResponses: UserResponses) => {
     try {
       setSubmitted(true);
-      exportData(questions, userResponses)
+      //exportData(questions, userResponses) -> exported from question form
     } catch (error) {
       console.error("Error:", error);
     }
@@ -62,7 +60,7 @@ const Home: React.FC<ParentProps> = ({ userResponses }) => {
   return (
     <div>
       {submitted ? (
-        <Page userResponses={userResponses} />
+        <SuccessPage userResponses={userResponses} />
       ) : (
         <QuestionForm questions={questions} onSubmit={handleFormSubmit} />
       )}

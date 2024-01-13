@@ -36,7 +36,7 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ questions, onSubmit }) => {
       handleNextQuestion();
     } else {
       onSubmit(userResponses); // question responses sent to page.tsx
-      //exportData(questions, userResponses); // data exported to exportData.tsx
+      exportData(questions, userResponses); // data exported to exportData.tsx
     }
   };
 

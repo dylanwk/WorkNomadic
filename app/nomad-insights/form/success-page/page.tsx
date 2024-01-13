@@ -8,7 +8,7 @@ interface SuccessPageProps {
   userResponses: UserResponses
 }
 
-const ChildComponent: React.FC<SuccessPageProps> = ({ userResponses }) => {
+const SuccessPage: React.FC<SuccessPageProps> = ({ userResponses }) => {
   //const response01 = userResponses.response1;
 
   //console.log(textPrompt);
@@ -27,4 +27,4 @@ const ChildComponent: React.FC<SuccessPageProps> = ({ userResponses }) => {
   );
 };
 
-export default ChildComponent;
+export default SuccessPage;
