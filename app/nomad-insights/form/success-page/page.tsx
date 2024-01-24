@@ -1,17 +1,17 @@
 import Link from "next/link";
 import React from "react";
-//import { UserResponses } from "@/app/components/Question";
 
 type UserResponses = Record<string, string | number>;
 
 interface SuccessPageProps {
-  userResponses: UserResponses
+  responses: UserResponses;
 }
 
-const SuccessPage: React.FC<SuccessPageProps> = ({ userResponses }) => {
-  //const response01 = userResponses.response1;
+const SuccessPage: React.FC<SuccessPageProps> = ({ responses }) => {
+  
+  console.log(responses);
 
-  //console.log(textPrompt);
+  
   return (
     <div className="card w-fill bg-base-100 shadow-xl">
       <div className="card-body">

@@ -7,13 +7,19 @@ import QuestionForm, {
 } from "@/app/components/Question";
 import { useState } from "react";
 import SuccessPage from "./success-page/page";
-//import { exportData } from "@/app/utils/exportData";
+import { exportData } from "@/app/utils/exportData";
 
-interface ParentProps {
-  userResponses: UserResponses
-}
+/* The flow of User's Responses
 
-const Home: React.FC<ParentProps> = ({ userResponses }) => {
+-> Answers from Quesiton.tsx populate userResponse once form is finished
+  ->  Home.handleFormSubmit is passed to Question.tsx through prop "onSubmit" and is called when form is finshed
+    -> Home.handleFormSubmit calls setUserResponses which populates updatedUserResponses
+      -> updatedUserResponses is sent to success-page ONLY if submitted is true (need to fix error handling)
+
+*/
+
+
+const Home: React.FC = () => {
   const questions: Question[] = [
     { id: "Current Location", 
       label: "Current Location 🌎", 
@@ -46,21 +52,24 @@ const Home: React.FC<ParentProps> = ({ userResponses }) => {
     },
   ];
 
+  const [userResponses, setUserResponses] = useState<UserResponses>({}); // new export logic
   const [submitted, setSubmitted] = useState(false);
 
-  const handleFormSubmit = async (userResponses: UserResponses) => {
+  const handleFormSubmit = async (updatedUserResponses: UserResponses) => {
     try {
+      setUserResponses(updatedUserResponses);
       setSubmitted(true);
-      //exportData(questions, userResponses) -> exported from question form
+      exportData(questions, updatedUserResponses);
     } catch (error) {
       console.error("Error:", error);
     }
   };
 
+
   return (
     <div>
       {submitted ? (
-        <SuccessPage userResponses={userResponses} />
+        <SuccessPage responses={userResponses} />
       ) : (
         <QuestionForm questions={questions} onSubmit={handleFormSubmit} />
       )}
