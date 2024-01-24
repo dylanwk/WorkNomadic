@@ -3,143 +3,27 @@ import React from "react";
 const ContactPage = () => {
   return (
     <section className="bg-gray-100">
-      <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
-          <div className="lg:col-span-2 lg:py-12">
-            <p className="max-w-xl text-lg">
-              For any inquires, please give us up to three business days to respond.
-            </p>
-
-            <div className="mt-8">
-              
-
-              <address className="mt-2 not-italic">
-                282 Kevin Brook, Imogeneborough, CA 58517
-              </address>
-            </div>
+      <section className="text-gray-900">
+  <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+      <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center">Contact Nomad Page</h2>
+      <p className="mb-8 lg:mb-16 font-light text-center text-gray-600 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+      <form action="#" className="space-y-8">
+          <div>
+              <label htmlFor="email" className="block mb-2 text-sm font-medium">Your email</label>
+              <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 " placeholder="name@example.com" required />
           </div>
-
-          <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-            <form action="" className="space-y-4">
-              <div>
-                <label className="sr-only" htmlFor="name">
-                  Name
-                </label>
-                <input
-                  className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                  placeholder="Name"
-                  type="text"
-                  id="name"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div>
-                  <label className="sr-only" htmlFor="email">
-                    Email
-                  </label>
-                  <input
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                    placeholder="Email address"
-                    type="email"
-                    id="email"
-                  />
-                </div>
-
-                <div>
-                  <label className="sr-only" htmlFor="phone">
-                    Phone
-                  </label>
-                  <input
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                    placeholder="Phone Number"
-                    type="tel"
-                    id="phone"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
-                <div>
-                  <input
-                    className="peer sr-only"
-                    id="option1"
-                    type="radio"
-                    tabIndex="-1"
-                    name="option"
-                  />
-
-                  <label
-                    htmlFor="option1"
-                    className="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
-                    tabIndex="0"
-                  >
-                    <span className="text-sm"> Option 1 </span>
-                  </label>
-                </div>
-
-                <div>
-                  <input
-                    className="peer sr-only"
-                    id="option2"
-                    type="radio"
-                    tabIndex="-1"
-                    name="option"
-                  />
-
-                  <label
-                    htmlFor="option2"
-                    className="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
-                    tabIndex="0"
-                  >
-                    <span className="text-sm"> Option 2 </span>
-                  </label>
-                </div>
-
-                <div>
-                  <input
-                    className="peer sr-only"
-                    id="option3"
-                    type="radio"
-                    tabIndex="-1"
-                    name="option"
-                  />
-
-                  <label
-                    htmlFor="option3"
-                    className="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
-                    tabIndex="0"
-                  >
-                    <span className="text-sm"> Option 3 </span>
-                  </label>
-                </div>
-              </div>
-
-              <div>
-                <label className="sr-only" htmlFor="message">
-                  Message
-                </label>
-
-                <textarea
-                  className="w-full rounded-lg border-gray-200 p-3 text-sm"
-                  placeholder="Message"
-                  rows="8"
-                  id="message"
-                ></textarea>
-              </div>
-
-              <div className="mt-4">
-                <button
-                  type="submit"
-                  className="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
-                >
-                  Send Enquiry
-                </button>
-              </div>
-            </form>
+          <div>
+              <label htmlFor="subject" className="block mb-2 text-sm font-medium ">Subject</label>
+              <input type="text" id="subject" className="block p-3 w-full text-sm bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500" placeholder="Let us know how we can help you" required />
           </div>
-        </div>
-      </div>
+          <div className="sm:col-span-2">
+              <label htmlFor="message" className="block mb-2 text-sm font-medium">Your message</label>
+              <textarea id="message" rows={4} className="block p-2.5 w-full text-sm bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+          </div>
+          <button type="submit" className="py-3 px-5 text-sm font-medium text-center rounded-lg bg-gray-700 text-white sm:w-fit hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-primary-300">Send message</button>
+      </form>
+  </div>
+</section>
     </section>
   );
 };

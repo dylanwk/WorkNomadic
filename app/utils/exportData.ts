@@ -1,4 +1,6 @@
 import OpenAI from "openai";
+import { DestinationItem } from "../components/types";
+
 
 type Question = {
     id: string;
@@ -14,7 +16,7 @@ const openai = new OpenAI({
 });
 
 let textPrompt =
-    "you are a travel recommendation engine, designed with cutting-edge algorithms and machine learning techniques. Your primary objective is to analyze a user's preferences and respond with one location that perfectly fits the user's preferences. Respond only with 1 location in location, country format with one paragraph about the location. The users preferences are: ";
+    "you are a travel recommendation engine, designed with cutting-edge algorithms and machine learning techniques. Your primary objective is to analyze a user's preferences and respond with one location that perfectly fits the user's preferences. Explain why, In format Location - Description. Make description around 60 words. The users preferences are: ";
 
 export const exportData = async (questions: Question[], responses: UserResponses) => {
     for (const key in responses) {
@@ -27,8 +29,13 @@ export const exportData = async (questions: Question[], responses: UserResponses
         temperature: 0,
         max_tokens: 2000,
     });
-    console.log((await response).choices[0].message.content);
 
+    const destinations: DestinationItem[] = [];
+
+    /* const [, ...entries] = JSON.stringify(
+        response.choices[0].message.content
+      ).split("\\n\\n"); */
+    console.log((await response).choices[0].message.content);
 };
 
 /*- 

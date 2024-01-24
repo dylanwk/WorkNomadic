@@ -18,9 +18,10 @@ type UserResponses = Record<string, string | number>;
 interface QuestionFormProps {
   questions: Question[];
   onSubmit: (responses: UserResponses) => void;
+  //onRequestPage: (questions: Question[], userResponses: UserResponses) => Promise<void>;
 }
 
-const QuestionForm: React.FC<QuestionFormProps> = ({ questions, onSubmit }) => {
+const QuestionForm: React.FC<QuestionFormProps> = ({ questions, onSubmit }) => { //onRequestPage
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userResponses, setUserResponses] = useState<UserResponses>({});
 
@@ -30,13 +31,14 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ questions, onSubmit }) => {
     setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (currentQuestionIndex < questions.length - 1) {
       handleNextQuestion();
     } else {
       onSubmit(userResponses); // question responses sent to page.tsx
       exportData(questions, userResponses); // data exported to exportData.tsx
+      // await onRequestPage(questions, userResponses);
     }
   };
 

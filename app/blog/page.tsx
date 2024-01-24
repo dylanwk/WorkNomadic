@@ -3,187 +3,175 @@ import React from "react";
 const joinNomadPage = () => {
   return (
     <div>
-      <div className="py-8 bg-gray-50"></div>
-      <section className="bg-gray-50 ">
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-          <div className="mx-auto max-w-lg text-center">
-            <h2 className="text-4xl font-bold sm:text-5xl">The Nomad Page 🌎</h2>
-
-            <p className="mt-4 ">
-              A blog for those who want to travel the world while they work.
-            </p>
+      <section className="bg-yellow-50 text-gray-100 pt-20">
+        <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+          <a
+            rel="noopener noreferrer"
+            href="#"
+            className="block rounded-lg max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-900"
+          >
+            <img
+              src="https://source.unsplash.com/random/480x360"
+              alt=""
+              className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 bg-gray-500"
+            />
+            <div className="p-6 space-y-2 lg:col-span-5">
+              <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
+                The most visited Country for digital nomads of 2023.
+              </h3>
+              <span className="text-xs text-gray-400">February 19, 2021</span>
+              <p>
+                This country was ranked the most visited digital nomad country of 2023.
+              </p>
+            </div>
+          </a>
+          <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="max-w-sm rounded-lg mx-auto group hover:no-underline focus:no-underline bg-gray-900"
+            >
+              <img
+                role="presentation"
+                className="object-cover w-full rounded h-44 bg-gray-500"
+                src="https://source.unsplash.com/random/480x360?1"
+              />
+              <div className="p-6 space-y-2">
+                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                  In usu laoreet repudiare legendos
+                </h3>
+                <span className="text-xs text-gray-400">January 21, 2021</span>
+                <p>
+                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                  neglegentur, ex has tantas percipit perfecto. At per tempor
+                  albucius perfecto, ei probatus consulatu patrioque mea, ei
+                  vocent delicata indoctum pri.
+                </p>
+              </div>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="max-w-sm rounded-lg mx-auto group hover:no-underline focus:no-underline bg-gray-900"
+            >
+              <img
+                role="presentation"
+                className="object-cover w-full rounded h-44 bg-gray-500"
+                src="https://source.unsplash.com/random/480x360?2"
+              />
+              <div className="p-6 space-y-2">
+                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                  In usu laoreet repudiare legendos
+                </h3>
+                <span className="text-xs text-gray-400">January 22, 2021</span>
+                <p>
+                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                  neglegentur, ex has tantas percipit perfecto. At per tempor
+                  albucius perfecto, ei probatus consulatu patrioque mea, ei
+                  vocent delicata indoctum pri.
+                </p>
+              </div>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="max-w-sm rounded-lg mx-auto group hover:no-underline focus:no-underline bg-gray-900"
+            >
+              <img
+                role="presentation"
+                className="object-cover w-full rounded h-44 bg-gray-500"
+                src="https://source.unsplash.com/random/480x360?3"
+              />
+              <div className="p-6 space-y-2">
+                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                  In usu laoreet repudiare legendos
+                </h3>
+                <span className="text-xs text-gray-400">January 23, 2021</span>
+                <p>
+                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                  neglegentur, ex has tantas percipit perfecto. At per tempor
+                  albucius perfecto, ei probatus consulatu patrioque mea, ei
+                  vocent delicata indoctum pri.
+                </p>
+              </div>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="max-w-sm rounded-lg mx-auto group hover:no-underline focus:no-underline bg-gray-900 hidden sm:block"
+            >
+              <img
+                role="presentation"
+                className="object-cover w-full rounded h-44 bg-gray-500"
+                src="https://source.unsplash.com/random/480x360?4"
+              />
+              <div className="p-6 space-y-2">
+                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                  In usu laoreet repudiare legendos
+                </h3>
+                <span className="text-xs text-gray-400">January 24, 2021</span>
+                <p>
+                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                  neglegentur, ex has tantas percipit perfecto. At per tempor
+                  albucius perfecto, ei probatus consulatu patrioque mea, ei
+                  vocent delicata indoctum pri.
+                </p>
+              </div>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="max-w-sm rounded-lg mx-auto group hover:no-underline focus:no-underline bg-gray-900 hidden sm:block"
+            >
+              <img
+                role="presentation"
+                className="object-cover w-full rounded h-44 bg-gray-500"
+                src="https://source.unsplash.com/random/480x360?5"
+              />
+              <div className="p-6 space-y-2">
+                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                  In usu laoreet repudiare legendos
+                </h3>
+                <span className="text-xs text-gray-400">January 25, 2021</span>
+                <p>
+                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                  neglegentur, ex has tantas percipit perfecto. At per tempor
+                  albucius perfecto, ei probatus consulatu patrioque mea, ei
+                  vocent delicata indoctum pri.
+                </p>
+              </div>
+            </a>
+            <a
+              rel="noopener noreferrer"
+              href="#"
+              className="max-w-sm rounded-lg mx-auto group hover:no-underline focus:no-underline bg-gray-900 hidden sm:block"
+            >
+              <img
+                role="presentation"
+                className="object-cover w-full rounded h-44 bg-gray-500"
+                src="https://source.unsplash.com/random/480x360?6"
+              />
+              <div className="p-6 space-y-2">
+                <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
+                  In usu laoreet repudiare legendos
+                </h3>
+                <span className="text-xs text-gray-400">January 26, 2021</span>
+                <p>
+                  Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
+                  neglegentur, ex has tantas percipit perfecto. At per tempor
+                  albucius perfecto, ei probatus consulatu patrioque mea, ei
+                  vocent delicata indoctum pri.
+                </p>
+              </div>
+            </a>
           </div>
-
-          <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <a
-              className="block rounded-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-              href="/services/digital-campaigns"
+          <div className="flex justify-center">
+            <button
+              type="button"
+              className="px-6 py-3 text-sm rounded-md hover:underline bg-gray-900 text-gray-400"
             >
-              <article className="group">
-                <img
-                  alt="Lava"
-                  src="https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  className="h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
-                />
-
-                <div className="p-4">
-                  <h3 className="text-lg font-medium">
-                    Finding the Journey to Mordor
-                  </h3>
-
-                  <p className="mt-2 line-clamp-3 text-sm/relaxed ">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Recusandae dolores, possimus pariatur animi temporibus
-                    nesciunt praesentium dolore sed nulla ipsum eveniet corporis
-                    quidem, mollitia itaque minus soluta, voluptates neque
-                    explicabo tempora nisi culpa eius atque dignissimos.
-                    Molestias explicabo corporis voluptatem?
-                  </p>
-                </div>
-              </article>
-            </a>
-
-            <a
-              className="block rounded-xl border-gray-800 transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-              href="/services/digital-campaigns"
-            >
-              <article className="group">
-                <img
-                  alt="Lava"
-                  src="https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  className="h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
-                />
-
-                <div className="p-4">
-                  <h3 className="text-lg font-medium">
-                    Finding the Journey to Mordor
-                  </h3>
-
-                  <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Recusandae dolores, possimus pariatur animi temporibus
-                    nesciunt praesentium dolore sed nulla ipsum eveniet corporis
-                    quidem, mollitia itaque minus soluta, voluptates neque
-                    explicabo tempora nisi culpa eius atque dignissimos.
-                    Molestias explicabo corporis voluptatem?
-                  </p>
-                </div>
-              </article>
-            </a>
-
-            <a
-              className="block rounded-xl border-gray-800 transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-              href="/services/digital-campaigns"
-            >
-              <article className="group">
-                <img
-                  alt="Lava"
-                  src="https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  className="h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
-                />
-
-                <div className="p-4">
-                  <h3 className="text-lg font-medium text-gray-900">
-                    Finding the Journey to Mordor
-                  </h3>
-
-                  <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Recusandae dolores, possimus pariatur animi temporibus
-                    nesciunt praesentium dolore sed nulla ipsum eveniet corporis
-                    quidem, mollitia itaque minus soluta, voluptates neque
-                    explicabo tempora nisi culpa eius atque dignissimos.
-                    Molestias explicabo corporis voluptatem?
-                  </p>
-                </div>
-              </article>
-            </a>
-
-            <a
-              className="block rounded-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-              href="/services/digital-campaigns"
-            >
-              <article className="group">
-                <img
-                  alt="Lava"
-                  src="https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  className="h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
-                />
-
-                <div className="p-4">
-                  <h3 className="text-lg font-medium ">
-                    Finding the Journey to Mordor
-                  </h3>
-
-                  <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Recusandae dolores, possimus pariatur animi temporibus
-                    nesciunt praesentium dolore sed nulla ipsum eveniet corporis
-                    quidem, mollitia itaque minus soluta, voluptates neque
-                    explicabo tempora nisi culpa eius atque dignissimos.
-                    Molestias explicabo corporis voluptatem?
-                  </p>
-                </div>
-              </article>
-            </a>
-
-            <a
-              className="block rounded-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-              href="/services/digital-campaigns"
-            >
-              <article className="group">
-                <img
-                  alt="Lava"
-                  src="https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  className="h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
-                />
-
-                <div className="p-4">
-                  <h3 className="text-lg font-medium">
-                    Finding the Journey to Mordor
-                  </h3>
-
-                  <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Recusandae dolores, possimus pariatur animi temporibus
-                    nesciunt praesentium dolore sed nulla ipsum eveniet corporis
-                    quidem, mollitia itaque minus soluta, voluptates neque
-                    explicabo tempora nisi culpa eius atque dignissimos.
-                    Molestias explicabo corporis voluptatem?
-                  </p>
-                </div>
-              </article>
-            </a>
-
-            <a
-              className="block rounded-xl transition hover:border-pink-500/10 hover:shadow-pink-500/10"
-              href="/services/digital-campaigns"
-            >
-              <article className="group">
-                <img
-                  alt="Lava"
-                  src="https://images.unsplash.com/photo-1631451095765-2c91616fc9e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                  className="h-56 w-full rounded-xl object-cover shadow-xl transition group-hover:grayscale-[50%]"
-                />
-
-                <div className="p-4">
-                  
-                    <h3 className="text-lg font-medium text-gray-900">
-                      Finding the Journey to Mordor
-                    </h3>
-                  
-
-                  <p className="mt-2 line-clamp-3 text-sm/relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Recusandae dolores, possimus pariatur animi temporibus
-                    nesciunt praesentium dolore sed nulla ipsum eveniet corporis
-                    quidem, mollitia itaque minus soluta, voluptates neque
-                    explicabo tempora nisi culpa eius atque dignissimos.
-                    Molestias explicabo corporis voluptatem?
-                  </p>
-                </div>
-              </article>
-            </a>
+              Load more posts...
+            </button>
           </div>
         </div>
       </section>

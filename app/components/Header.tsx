@@ -20,21 +20,17 @@ const Header = () => {
         <nav aria-label="Global" className="hidden md:block">
           <ul className="flex items-center gap-6 text-sm">
             <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="/about"> About </a>
+              <a className="text-gray-500 transition hover:text-gray-500/75" href="/about"> What is Nomad Page? </a>
             </li>
 
             <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="/explore"> Explore </a>
+              <a className="text-gray-500 transition hover:text-gray-500/75" href="/services"> Services </a>
             </li>
 
             <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="/nomad-insights"> Nomad Insights </a>
+              <a className="text-gray-500 transition hover:text-gray-500/75" href="/locations"> Locations </a>
             </li>
-
-            <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="/blog"> Blog </a>
-            </li>
-
+              
             <li>
               <a className="text-gray-500 transition hover:text-gray-500/75" href="/contact"> Contact </a>
             </li>
@@ -42,16 +38,7 @@ const Header = () => {
         </nav>
 
         <div className="flex items-center gap-4">
-          <div className="sm:flex sm:gap-4">
-            <a
-              className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-              href="/"
-            >
-              Join
-            </a>
-
-            
-          </div>
+          
 
           <div className="block md:hidden">
             <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">

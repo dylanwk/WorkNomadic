@@ -9,36 +9,169 @@ import path from "path";
 export default function Home() {
   return (
     <main>
-      <div className="p-2 bg-gray-50"></div>
+      <div className="p-2 bg-yellow-50"></div>
 
-      <section className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center">
-        <div className="p-8 md:p-12 lg:px-16 lg:py-44">
-          <div className="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
-              A Travel Agency for Digital Nomads
-            </h2>
-
-            <p className="hidden text-gray-500 md:mt-4 md:block">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-              egestas tempus tellus etiam sed.
+      <section className="  bg-yellow-50">
+        <div className="grid max-w-screen-2xl px-4 py-8 items-center mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-2">
+          <div className="mr-auto px-3 pr-8 place-self-center">
+            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
+              Destinations for Digital Nomads.
+            </h1>
+            <p className="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl">
+              We are a travel agency designed for remote workers.
             </p>
-
-            <div className="mt-4 md:mt-8">
-              <a
-                href="#"
-                className="inline-block rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400"
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-grey-900 rounded-lg  hover:bg-gray-800 hover:text-white focus:ring-4 focus:ring-primary-300 focus:ring-primary-900"
+            >
+              Explore Destinations
+              <svg
+                className="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                Get Started Today
-              </a>
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="/about"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border  rounded-lg hover:bg-gray-900 hover:text-white focus:ring-4 focus:ring-gray-100 border-gray-900  "
+            >
+              Learn More
+            </a>
+          </div>
+          <div className="grid grid-cols-2 gap-4 mt-8">
+            <img
+              className="w-full rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+              alt="office content 1"
+            />
+            <img
+              className="mt-4 w-full lg:mt-10 rounded-lg"
+              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+              alt="office content 2"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div className="pt-24 bg-yellow-50"></div>
+
+      <section className="bg-yellow-50 text-gray-700">
+        <div className="container max-w-xl p-6 py-10 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
+          <div>
+            <h2 className="text-3xl font-bold tracki text-center sm:text-4xl text-gray-900">
+              Why Nomad Page?
+            </h2>
+          </div>
+          <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+            <div>
+              <div className="mt-2 space-y-12">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        className="w-7 h-7"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-medium leadi text-gray-800">
+                      Work-Friendly Accomidations
+                    </h4>
+                    <p className="mt-2 ">
+                      We provide accommodations with dedicated workspaces,
+                      high-speed internet, and amenities that cater to remote
+                      work needs.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        className="w-7 h-7"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-medium leadi text-gray-800">
+                      Visa Assistance
+                    </h4>
+                    <p className="mt-2 ">
+                      We help you navigate the complexities of
+                      working remotely from different locations.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        className="w-7 h-7"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-lg font-medium leadi text-gray-800">
+                      Number 4
+                    </h4>
+                    <p className="mt-2">
+                      At sed possim oporteat probatus, justo graece ne nec,
+                      minim commodo legimus ut vix. Ut eos iudico quando soleat,
+                      nam modus.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div aria-hidden="true" className="mt-10 lg:mt-0">
+              <img
+                src="https://source.unsplash.com/random/360x480"
+                alt=""
+                className="mx-auto rounded-lg shadow-lg bg-gray-500"
+              />
             </div>
           </div>
         </div>
-
-        <img
-          alt="destination"
-          src="https://api.time.com/wp-content/uploads/2022/07/Worlds-Greatest-Places-2022-BaliIndonesia.jpeg?quality=85&w=1600"
-          className="h-full w-full rounded-lg object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
-        />
       </section>
 
       <div className="p-12 bg-gray-50"></div>
@@ -85,9 +218,6 @@ export default function Home() {
         </div>
       </section>
 
-
-
-
       <section className="bg-gray-50">
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
           <div className="mx-auto max-w-lg text-center">
@@ -108,7 +238,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  'url(https://images.travelandleisureasia.com/wp-content/uploads/sites/5/2023/11/17141542/cape-town-africa.jpeg)',
+                  "url(https://images.travelandleisureasia.com/wp-content/uploads/sites/5/2023/11/17141542/cape-town-africa.jpeg)",
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
@@ -120,7 +250,8 @@ export default function Home() {
                   <div className="mt-4">
                     <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
                       <p className="text-sm text-white">
-                      Known for rich cultural heritage, breathtaking landscapes, and diverse wildlife.
+                        Known for rich cultural heritage, breathtaking
+                        landscapes, and diverse wildlife.
                       </p>
                     </div>
                   </div>
@@ -133,7 +264,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  'url(https://www.planetware.com/wpimages/2019/10/asia-best-places-to-visit-mount-fuji-japan.jpg)',
+                  "url(https://www.planetware.com/wpimages/2019/10/asia-best-places-to-visit-mount-fuji-japan.jpg)",
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
@@ -145,7 +276,8 @@ export default function Home() {
                   <div className="mt-4">
                     <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
                       <p className="text-sm text-white">
-                        Known for vibrant traditions, Aisa everyting from bustling metropolises to serene retreats.
+                        Known for vibrant traditions, Aisa everyting from
+                        bustling metropolises to serene retreats.
                       </p>
                     </div>
                   </div>
@@ -158,7 +290,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  'url(https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-471662379-1380x1035.jpg)',
+                  "url(https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-471662379-1380x1035.jpg)",
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
@@ -170,8 +302,9 @@ export default function Home() {
                   <div className="mt-4">
                     <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
                       <p className="text-sm text-white">
-                      Known for its historic charm, Europe enchants it's travelers with centuries-old cultures and architectural wonders.
-
+                        Known for its historic charm, Europe enchants it's
+                        travelers with centuries-old cultures and architectural
+                        wonders.
                       </p>
                     </div>
                   </div>
@@ -184,7 +317,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  'url(https://i0.wp.com/www.tripstodiscover.com/wp-content/uploads/2016/07/bigstock-Beautiful-view-of-Palau-island-86974844.jpg?resize=784%2C588)',
+                  "url(https://i0.wp.com/www.tripstodiscover.com/wp-content/uploads/2016/07/bigstock-Beautiful-view-of-Palau-island-86974844.jpg?resize=784%2C588)",
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
@@ -196,7 +329,8 @@ export default function Home() {
                   <div className="mt-4">
                     <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
                       <p className="text-sm text-white">
-                      Known for pristine landscapes, Oceania invites travelers to explore stunning islands and friendly communities.
+                        Known for pristine landscapes, Oceania invites travelers
+                        to explore stunning islands and friendly communities.
                       </p>
                     </div>
                   </div>
@@ -209,7 +343,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  'url(https://i.natgeofe.com/n/cb160852-0cbe-402c-883a-a18e6cbe32dd/6647.jpg?w=1084.125&h=813.75)',
+                  "url(https://i.natgeofe.com/n/cb160852-0cbe-402c-883a-a18e6cbe32dd/6647.jpg?w=1084.125&h=813.75)",
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
@@ -236,7 +370,7 @@ export default function Home() {
                 backgroundImage:
                   'url("https://hips.hearstapps.com/hmg-prod/images/long-boat-docked-on-beach-in-krabi-thailand-summers-royalty-free-image-1622044679.jpg")',
               }}
-            > 
+            >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
                 <div className="relative p-4 sm:p-6 lg:p-8">
                   <p className="text-2xl text-white sm:text-3xl text-center font-bold">
@@ -257,7 +391,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
 
       <section className="bg-gray-50">
         <div className="mx-auto max-w-screen-xl px-4 py-24 lg:py-40 lg:flex lg:items-center">
@@ -282,18 +415,12 @@ export default function Home() {
               >
                 Get Started with Nomad Insights
               </a>
-
-              
             </div>
           </div>
         </div>
       </section>
 
-
       <div className="py-8 bg-gray-50"></div>
-
-
-      
     </main>
   );
 }
