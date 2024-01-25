@@ -3,7 +3,6 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { DndProvider, useDrag, useDrop } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { exportData } from "../utils/exportData";
 
 type Question = {
   id: string;

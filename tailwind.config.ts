@@ -14,6 +14,7 @@ module.exports = {
   plugins: [
   require("daisyui"),
   require('@tailwindcss/forms'),
+  require("tailwindcss-animation-delay"),
 ],
   daisyui: {
     themes: ["corporate", "coffee"],

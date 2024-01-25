@@ -7,7 +7,6 @@ import QuestionForm, {
 } from "@/app/components/Question";
 import { useState } from "react";
 import SuccessPage from "./success-page/page";
-import { exportData } from "@/app/utils/exportData";
 
 /* The flow of User's Responses
 
@@ -21,10 +20,10 @@ import { exportData } from "@/app/utils/exportData";
 
 const Home: React.FC = () => {
   const questions: Question[] = [
-    { id: "Current Location", 
-      label: "Current Location 🌎", 
-      type: "open-ended",
-      description: "example: US" 
+    { id: "Wifi Speed preference", 
+      label: "What is your Wifi preference?", 
+      type: "multiple-choice",
+      options: ["No Need for Wifi", "Moderate (~30mbs)", "High Speeds (~60mbs)"] 
     },
     {
       id: "Region Preference",
@@ -45,10 +44,10 @@ const Home: React.FC = () => {
       description: "ex: surfing, hiking, nightlife, etc."
     },
     {
-      id: "Plant Tikcet budget one way",
-      label: "Plane Ticket budget (one way) ✈️",
-      type: "multiple-choice",
-      options: ["<300", "400", ">500"],
+      id: "Budget per month in dollars",
+      label: "How much are you willing to spend a month",
+      type: "open-ended",
+      description: "ex: $2500, $4000, $6000"
     },
   ];
 
@@ -59,7 +58,7 @@ const Home: React.FC = () => {
     try {
       setUserResponses(updatedUserResponses);
       setSubmitted(true);
-      exportData(questions, updatedUserResponses);
+      //exportData(questions, updatedUserResponses);
     } catch (error) {
       console.error("Error:", error);
     }
