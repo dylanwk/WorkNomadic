@@ -1,5 +1,6 @@
 import { url } from "inspector";
 import Image from "next/image";
+
 import Link from "next/link";
 import path from "path";
 //src="https://api.time.com/wp-content/uploads/2022/07/Worlds-Greatest-Places-2022-BaliIndonesia.jpeg?quality=85&w=1600"
@@ -13,15 +14,15 @@ export default function Home() {
 
       <section className="  bg-yellow-50">
         <div className="grid max-w-screen-2xl px-4 py-8 items-center mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-2">
-          <div className="mr-auto px-3 pr-8 place-self-center">
+          <div className="mr-auto px-3 pr-8 pl-6 place-self-center">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">
-              Destinations for Digital Nomads.
+              Destinations for Remote Workers.
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl">
-              We are a travel agency designed for remote workers.
+              We are a travel agency designed for those who work remote.
             </p>
             <a
-              href="#"
+              href="/locations"
               className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-grey-900 rounded-lg  hover:bg-gray-800 hover:text-white focus:ring-4 focus:ring-primary-300 focus:ring-primary-900"
             >
               Explore Destinations
@@ -45,16 +46,23 @@ export default function Home() {
               Learn More
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-4 mt-8">
-            <img
-              className="w-full rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
-              alt="office content 1"
+          <div className="grid grid-cols-2 gap-4 mt-8 pr-8">
+            <Image
+              className="rounded-lg"
+              src="/images/homePic2.png"
+              alt=""
+              height={541}
+              width={390}
+              unoptimized={true}
+              loading="lazy"
             />
-            <img
-              className="mt-4 w-full lg:mt-10 rounded-lg"
-              src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
-              alt="office content 2"
+            <Image
+              className="mt-4 lg:mt-10 rounded-lg"
+              src="/images/homePic1.png"
+              alt=""
+              height={541}
+              width={390}
+              unoptimized={false}
             />
           </div>
         </div>
@@ -126,8 +134,8 @@ export default function Home() {
                       Visa Assistance
                     </h4>
                     <p className="mt-2 ">
-                      We help you navigate the complexities of
-                      working remotely from different locations.
+                      We help you navigate the complexities of working remotely
+                      from different locations.
                     </p>
                   </div>
                 </div>

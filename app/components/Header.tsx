@@ -4,13 +4,13 @@ const Header = () => {
   return (
 
 
-    <header className="bg-white">
+    <header className="bg-yellow-50">
   <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-    <div className="flex h-16 items-center justify-between">
+    <div className="flex h-20 items-center justify-between">
       <div className="flex-1 md:flex md:items-center md:gap-12">
         <a className="block text-teal-600" href="/">
           <span className="sr-only">Home</span>
-          <img className="h-14" src="/images/icon.png" alt="logo">
+          <img className="h-16" src="/images/icon.png" alt="logo">
             
           </img>
         </a>
@@ -18,21 +18,17 @@ const Header = () => {
 
       <div className="md:flex md:items-center md:gap-12">
         <nav aria-label="Global" className="hidden md:block">
-          <ul className="flex items-center gap-6 text-sm">
+          <ul className="flex items-center gap-8 text-sm">
             <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="/about"> What is Nomad Page? </a>
+              <a className="text-gray-900 transition hover:text-gray-500" href="/about"> What is Nomad Page? </a>
             </li>
 
             <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="/services"> Services </a>
-            </li>
-
-            <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="/locations"> Locations </a>
+              <a className="text-gray-900 transition hover:text-gray-500" href="/locations"> Locations </a>
             </li>
               
             <li>
-              <a className="text-gray-500 transition hover:text-gray-500/75" href="/contact"> Contact </a>
+              <a className="text-gray-900 transition hover:text-gray-500" href="/contact"> Contact </a>
             </li>
           </ul>
         </nav>
