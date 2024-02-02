@@ -70,120 +70,61 @@ const locations = () => {
         </div>
       </section>
 
-
-
       <section className="py-10 bg-yellow-50 sm:py-16 lg:py-24">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 text-center sm:grid-cols-2 gap-y-8 lg:grid-cols-4 sm:gap-12">
             <div>
-              <div className="flex items-center justify-center w-20 h-20 mx-auto bg-blue-100 rounded-full">
-                <svg
-                  className="text-blue-600 w-9 h-9"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M12 11c0 3.517-1.009 6.799-2.753 9.571m-3.44-2.04l.054-.09A13.916 13.916 0 008 11a4 4 0 118 0c0 1.017-.07 2.019-.203 3m-2.118 6.844A21.88 21.88 0 0015.171 17m3.839 1.132c.645-2.266.99-4.659.99-7.132A8 8 0 008 4.07M3 15.364c.64-1.319 1-2.8 1-4.364 0-1.457.39-2.823 1.07-4"
-                  />
-                </svg>
-              </div>
-              <h3 className="mt-8 text-lg font-semibold text-black">
-                Work-Friendly Accomidations
-              </h3>
-              <p className="mt-4 text-sm text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
-            </div>
-
-            <div>
-              <div className="flex items-center justify-center w-20 h-20 mx-auto bg-orange-100 rounded-full">
-                <svg
-                  className="text-orange-600 w-9 h-9"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <h3 className="mt-8 text-lg font-semibold text-black">
-                Fast & Easy Booking
-              </h3>
-              <p className="mt-4 text-sm text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-              </p>
-            </div>
-
-            <div>
-              <div className="flex items-center justify-center w-20 h-20 mx-auto bg-green-100 rounded-full">
-                <svg
-                  className="text-green-600 w-9 h-9"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                  />
-                </svg>
+              <div className="flex items-center justify-center w-20 h-20 mx-auto bg-blue-50 rounded-full">
+                <div className="text-5xl">💰</div>
               </div>
               <h3 className="mt-8 text-lg font-semibold text-black">
                 No Markup Pricing
               </h3>
               <p className="mt-4 text-sm text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
+                There is $0 add-on charge from the housing providor to you.
+              </p>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-center w-20 h-20 mx-auto bg-orange-100 rounded-full">
+                <div className="text-5xl">💨</div>
+              </div>
+              <h3 className="mt-8 text-lg font-semibold text-black">
+                Fast & Easy Booking
+              </h3>
+              <p className="mt-4 text-sm text-gray-600">
+                Book straight from the providors site, no hassling with 3rd
+                party vendors.
+              </p>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-center w-20 h-20 mx-auto bg-green-100 rounded-full">
+                <div className="text-5xl">💻</div>
+              </div>
+              <h3 className="mt-8 text-lg font-semibold text-black">
+                Work-Friendly Accomidations
+              </h3>
+              <p className="mt-4 text-sm text-gray-600">
+                All rentals on Nomadic Page are tailored for working remote.
+                Learn More.
               </p>
             </div>
 
             <div>
               <div className="flex items-center justify-center w-20 h-20 mx-auto bg-red-100 rounded-full">
-                <svg
-                  className="text-red-600 w-9 h-9"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-                  />
-                </svg>
+                <div className="text-5xl">🌎 </div>
               </div>
               <h3 className="mt-8 text-lg font-semibold text-black">
                 +10,000 Locations
               </h3>
               <p className="mt-4 text-sm text-gray-600">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
+                View thousands of unique rentals from all corners of the globe.
               </p>
             </div>
           </div>
         </div>
       </section>
-
-
-
 
       <section className="bg-yellow-50 py-20">
         <div className="mx-auto max-w-screen-2xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
@@ -193,8 +134,8 @@ const locations = () => {
             </h2>
 
             <p className="mt-4 text-gray-700 text-lg mb-6">
-              Discover The Nomadic Page's AI Travel Recommendation System.{" "}
-              <br />
+              Discover Nomadic Page's AI-leveraging Travel Recommendation
+              System. <br />
               Your no-cost tool for finding the best travel destinations.
             </p>
 
@@ -248,31 +189,40 @@ const locations = () => {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-10 pb-15">
-        <div className="mx-auto max-w-screen-3xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-3xl font-bold sm:text-4xl">
-              Get started with Nomad Insights.
-            </h1>
-
-            <p className="mt-3 text-gray-500">
-              You only need an email. No Credit Card needed.
+      <section className="bg-yellow-50">
+        <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+          <img
+            className="w-full "
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg"
+            alt="dashboard image"
+          />
+          <div className="mt-4 md:mt-0">
+            <h2 className="mb-4 text-4xl  font-extrabold text-gray-900 ">
+              Let's create more tools and ideas that brings us together.
+            </h2>
+            <p className="mb-6 font-light text-gray-500 md:text-lg ">
+              Flowbite helps you connect with friends and communities of people
+              who share your interests. Connecting with your friends and family
+              as well as discovering new ones is easy with features like Groups. (992715)
             </p>
-          </div>
-          <div className="flex flex-row mt-8 items-center self-center justify-center flex-shrink-0 lg:justify-center">
-            <div className="flex flex-row">
-              <input
-                type="text"
-                placeholder="example@email.com"
-                className=" w-full p-3 rounded-l-lg sm:w-4/5 bg-gray-200"
-              />
-              <button
-                type="button"
-                className="w-2/5 p-3 font-semibold rounded-r-lg sm:w-1/3 bg-indigo-600 text-white hover:bg-indigo-400 "
+            <a
+              href="#"
+              className="inline-flex items-center text-white bg-gray-700 hover:bg-gray-800 focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center "
+            >
+              Get started
+              <svg
+                className="ml-2 -mr-1 w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                Start
-              </button>
-            </div>
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
