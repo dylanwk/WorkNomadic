@@ -1,5 +1,5 @@
 import React from 'react'
-import { getDestinationImage } from '../components/ImageAPI';
+import { getDestinationImage } from '../components/getImage';
 import Link from 'next/link';
 import Image from 'next/image';
 

@@ -1,8 +1,11 @@
 
 const axios = require('axios');
 
-export async function getDestinationImage(destinationName: string, apiKey: string, cx: string) {
+export async function getDestinationImage(destinationName: string) {
+    const apiKey = 'AIzaSyC0CuwQE_EPaAFRbCKOHmMzGbosguOEr74';
+    const cx = '123dc09aea7fb4e5c';
     const apiUrl = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(destinationName)}&cx=${cx}&searchType=image&key=${apiKey}`;
+    
 
     try {
         const response = await axios.get(apiUrl);
