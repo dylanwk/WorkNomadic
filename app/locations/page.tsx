@@ -127,7 +127,7 @@ const locations = () => {
       </section>
 
       <section className="bg-yellow-50 py-20">
-        <div className="mx-auto max-w-screen-2xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+        <div className="mx-auto max-w-screen-2xl px-4 py-12 sm:px-6 md:py-16 lg:px-8 items-center text-center">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
               Use AI Technology. Find Better Destinations.
@@ -138,25 +138,6 @@ const locations = () => {
               System. <br />
               Your no-cost tool for finding the best travel destinations.
             </p>
-
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 mr-3 font-semibold text-lg text-center text-grey-900 rounded-lg  hover:bg-gray-800 hover:text-white focus:ring-4 focus:ring-primary-300 focus:ring-primary-900"
-            >
-              Try Now
-              <svg
-                className="w-5 h-5 ml-2 -mr-1"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
           </div>
 
           <div className="mt-8 sm:mt-12">
@@ -186,46 +167,29 @@ const locations = () => {
               </div>
             </dl>
           </div>
+
+          <a
+            href="/nomad-insights"
+            className="inline-flex mx-auto items-center justify-center px-5 py-3 mt-10 mr-3 font-medium text-base text-center text-grey-900 rounded-lg  hover:bg-gray-800 hover:text-white focus:ring-4 focus:ring-primary-300 focus:ring-primary-900"
+          >
+            Try Now
+            <svg
+              className="w-5 h-5 ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              ></path>
+            </svg>
+          </a>
         </div>
       </section>
 
-      <section className="bg-yellow-50">
-        <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-          <img
-            className="w-full "
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/cta-dashboard-mockup.svg"
-            alt="dashboard image"
-          />
-          <div className="mt-4 md:mt-0">
-            <h2 className="mb-4 text-4xl  font-extrabold text-gray-900 ">
-              Let's create more tools and ideas that brings us together.
-            </h2>
-            <p className="mb-6 font-light text-gray-500 md:text-lg ">
-              Flowbite helps you connect with friends and communities of people
-              who share your interests. Connecting with your friends and family
-              as well as discovering new ones is easy with features like Groups. (992715)
-            </p>
-            <a
-              href="#"
-              className="inline-flex items-center text-white bg-gray-700 hover:bg-gray-800 focus:ring-4  font-medium rounded-lg text-sm px-5 py-2.5 text-center "
-            >
-              Get started
-              <svg
-                className="ml-2 -mr-1 w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 };

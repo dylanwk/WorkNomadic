@@ -70,161 +70,34 @@ export default function Home() {
 
       <div className="pt-24 bg-yellow-50"></div>
 
-      <section className="bg-yellow-50 text-gray-700">
-        <div className="container max-w-xl p-6 py-10 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
-          <div>
-            <h2 className="text-3xl font-bold tracki text-center sm:text-4xl text-gray-900">
-              Why Nomad Page?
-            </h2>
-          </div>
-          <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
-            <div>
-              <div className="mt-2 space-y-12">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        className="w-7 h-7"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium leadi text-gray-800">
-                      Work-Friendly Accomidations
-                    </h4>
-                    <p className="mt-2 ">
-                      We provide accommodations with dedicated workspaces,
-                      high-speed internet, and amenities that cater to remote
-                      work needs.
-                    </p>
-                  </div>
+      <div className="bg-yellow-50">
+        <section className="py-10 sm:py-16 lg:py-24">
+          <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
+            <div className="grid items-center text-center grid-cols-1 gap-12">
+              <h1 className="text-3xl tracking-tight font-bold text-black sm:text-3xl md:text-4xl lg:text-5xl">
+                A Travel Agency by Digital Nomads.&nbsp; <br></br>
+                <div className="relative inline-flex">
+                  <span className="absolute inset-x-0 bottom-0 border-b-[30px] border-[#c5ce7f]"></span>
+                  <h1 className="relative text-3xl font-bold text-black sm:text-3xl md:text-4xl lg:text-5xl">
+                    {" "}
+                    For Digital Nomads.
+                  </h1>
                 </div>
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        className="w-7 h-7"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium leadi text-gray-800">
-                      Visa Assistance
-                    </h4>
-                    <p className="mt-2 ">
-                      We help you navigate the complexities of working remotely
-                      from different locations.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-md bg-violet-400">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        className="w-7 h-7"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M5 13l4 4L19 7"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-medium leadi text-gray-800">
-                      Number 4
-                    </h4>
-                    <p className="mt-2">
-                      At sed possim oporteat probatus, justo graece ne nec,
-                      minim commodo legimus ut vix. Ut eos iudico quando soleat,
-                      nam modus.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div aria-hidden="true" className="mt-10 lg:mt-0">
-              <img
-                src="https://source.unsplash.com/random/360x480"
-                alt=""
-                className="mx-auto rounded-lg shadow-lg bg-gray-500"
-              />
+              </h1>
+
+              <p className="mt-8 text-base text-black px-20 sm:text-xl">
+                We understand your needs are different than the average traveler. All our destinations are hand-picked by digital nomads for digital nomads.
+              </p>
+
+              <div></div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
-      <div className="p-12 bg-gray-50"></div>
+      <div className="p-12 bg-yellow-50"></div>
 
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 sm:text-3xl">
-              Not your ordinary Travel Agency
-            </h2>
-
-            <p className="mt-4 text-gray-500 sm:text-xl">
-              We are dedicated to providing the best experience to our users.
-            </p>
-          </div>
-
-          <div className="mt-8 sm:mt-12">
-            <dl className="grid grid-cols-1 gap-2 sm:grid-cols-3 sm:divide-x sm:divide-gray-100">
-              <div className="flex flex-col px-3 py-8 text-center">
-                <dt className="order-last text-lg font-medium text-gray-500"></dt>
-
-                <dd className="text-xl font-extrabold text-emerald-600 md:text-3xl">
-                  AI-Backed Research
-                </dd>
-              </div>
-
-              <div className="flex flex-col px-3 py-8 text-center">
-                <dt className="order-last text-lg font-medium text-gray-500"></dt>
-
-                <dd className="text-xl font-extrabold text-emerald-600 md:text-3xl">
-                  No Markup Pricing
-                </dd>
-              </div>
-
-              <div className="flex flex-col px-3 py-8 text-center">
-                <dt className="order-last text-lg font-medium text-gray-500"></dt>
-
-                <dd className="text-xl font-extrabold text-emerald-600 md:text-3xl">
-                  Custom Destinations
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </div>
-      </section>
+      
 
       <section className="bg-gray-50">
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">

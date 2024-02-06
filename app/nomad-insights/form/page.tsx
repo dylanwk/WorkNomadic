@@ -6,7 +6,7 @@ import QuestionForm, {
   UserResponses,
 } from "@/app/components/Question";
 import { useState } from "react";
-import SuccessPage from "./success-page/page";
+import SuccessPage from "../../success-page/page";
 
 /* The flow of User's Responses
 
