@@ -2,7 +2,7 @@ import React from "react";
 
 const about = () => {
   return (
-    <section className="bg-gray-50">
+    <section className="bg-yellow-50">
       <div className="pt-16"></div>
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="max-w-screen-lg text-gray-500 sm:text-lg">
@@ -44,7 +44,7 @@ const about = () => {
         </div>
       </section>
 
-      <section className=" ">
+      <section className=" bg-yellow-50">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
           <div className="mx-auto max-w-screen-md sm:text-center">
             <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
@@ -106,7 +106,7 @@ const about = () => {
           </div>
         </div>
       </section>
-
+      <div className="py-16"></div>
 
     </section>
   );

@@ -99,7 +99,7 @@ export default function Home() {
 
       
 
-      <section className="bg-gray-50">
+      <section className="bg-yellow-50">
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
           <div className="mx-auto max-w-lg text-center">
             <h2 className="text-3xl font-bold sm:text-4xl">
@@ -273,7 +273,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-50">
+      <section className="bg-gradient-to-b from-yellow-50 to-gray-100">
         <div className="mx-auto max-w-screen-xl px-4 py-24 lg:py-40 lg:flex lg:items-center">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-3xl font-bold sm:text-4xl">
@@ -301,7 +301,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="py-8 bg-gray-50"></div>
+      
     </main>
   );
 }
