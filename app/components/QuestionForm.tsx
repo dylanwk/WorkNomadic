@@ -1,40 +1,38 @@
-// Question.tsx
+"use client";
+import { questions, UserResponses } from "../utils/data"
+import { useRouter } from "next/navigation"
+import { useState } from "react"
+import { DndProvider } from "react-dnd"
+import { HTML5Backend } from "react-dnd-html5-backend"
 
-import React, { useState, ChangeEvent, FormEvent } from "react";
-import { DndProvider, useDrag, useDrop } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
+export default function QuestionForm() {
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+  const [userResponses, setUserResponses] = useState<UserResponses>({})
 
-type Question = {
-  id: string;
-  label: string;
-  type: "open-ended" | "multiple-choice";
-  options?: string[];
-  description?: string;
-};
+  const router = useRouter()
 
-type UserResponses = Record<string, string | number>;
-
-interface QuestionFormProps {
-  questions: Question[];
-  onSubmit: (responses: UserResponses) => void;
-}
-
-const QuestionForm: React.FC<QuestionFormProps> = ({ questions, onSubmit }) => { 
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [userResponses, setUserResponses] = useState<UserResponses>({});
-
-  const currentQuestion = questions[currentQuestionIndex];
+  const currentQuestion = questions[currentQuestionIndex]
 
   const handleNextQuestion = () => {
-    setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
+    setCurrentQuestionIndex((prevIndex) => prevIndex + 1)
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
     if (currentQuestionIndex < questions.length - 1) {
-      handleNextQuestion();
+      handleNextQuestion()
     } else {
-      onSubmit(userResponses); // question responses sent to form folder
+      const queryParams = new URLSearchParams()
+
+      // Append id and value for each question to the query parameters
+      questions.forEach((question) => {
+        const value = userResponses[question.id]
+        if (value !== undefined) {
+          queryParams.append(question.id, value.toString())
+        }
+      });
+
+      router.push(`/nomad-insights/destination?${queryParams.toString()}`)
     }
   };
 
@@ -91,36 +89,20 @@ const QuestionForm: React.FC<QuestionFormProps> = ({ questions, onSubmit }) => {
                   </div>
                 ) : null}
               </label>
-              <div className="p-2" >
-              <button type="submit" className="btn btn-primary">
-                {currentQuestionIndex < questions.length - 1
-                  ? "Next Question"
-                  : "Get Recommendation"}
-              </button>
+              <div className="p-2">
+                <button type="submit" className="btn btn-primary">
+                  {currentQuestionIndex < questions.length - 1
+                    ? "Next Question"
+                    : "Get Recommendation"}
+                </button>
               </div>
-              <div className="p-7"/>
+              <div className="p-7" />
             </div>
           </form>
         </div>
       </div>
     </DndProvider>
   );
-};
+}
 
-export default QuestionForm;
-export type { Question };
 export type { UserResponses };
-
-/*- 
-
-<div className="hero min-h-screen bg-base-200">
-  <div className="hero-content text-center">
-    <div className="max-w-md">
-      <h1 className="text-5xl font-bold">Hello there</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div>
-
--*/
