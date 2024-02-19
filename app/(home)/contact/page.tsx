@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactPage = () => {
   return (
-    <section className="bg-gradient-to-b from-yellow-50 to-gray-100">
+    <section className="bg-yellow-50">
       <section className="text-gray-900 pt-6 ">
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center">

@@ -55,7 +55,6 @@ export default function Home() {
               height={541}
               width={390}
               
-              loading="lazy"
             />
             <Image
               className="mt-4 lg:mt-10 rounded-lg"
@@ -64,7 +63,7 @@ export default function Home() {
               height={541}
               width={390}
               quality={100}
-              priority={true}
+              
             />
           </div>
         </div>
@@ -76,7 +75,7 @@ export default function Home() {
         <section className="py-10 sm:py-16 lg:py-24">
           <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
             <div className="grid items-center text-center grid-cols-1 gap-12">
-              <h1 className="text-3xl tracking-tight font-bold text-black sm:text-3xl md:text-4xl lg:text-5xl">
+              <h1 className="text-3xl tracking-tight font-bold text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl">
                 A Travel Agency by Digital Nomads.&nbsp; <br></br>
                 <div className="relative inline-flex">
                   <span className="absolute inset-x-0 bottom-0 border-b-[30px] border-[#c5ce7f]"></span>
@@ -86,12 +85,71 @@ export default function Home() {
                   </h1>
                 </div>
               </h1>
+           
 
-              <p className="mt-8 text-base text-black px-20 sm:text-xl">
-                We understand your needs are different than the average traveler. All our destinations are hand-picked by digital nomads for digital nomads.
-              </p>
-
-              <div></div>
+              <div className="grid mb-8 border border-gray-200 rounded-lg shadow-sm  md:mb-12 md:grid-cols-2 bg-gray-50 ">
+                <figure className="flex flex-col items-center justify-center p-6 text-center bg-gray-50 border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
+                  <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+                    <h3 className="text-3xl font-semibold tracking-tight text-gray-900 ">
+                      Locations
+                    </h3>
+                    <p className="mx-6 my-4">
+                      All locations are in close proximity to ammendities such as cafes,
+                      restaurants, grocery stores, and coworking spaces
+                    </p>
+                  </blockquote>
+                  <figcaption className="flex items-center justify-center ">
+                    <div className="flex items-center justify-center w-20 h-20 mx-auto bg-blue-50 rounded-full">
+                      <div className="text-5xl">🌴</div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <figure className="flex flex-col items-center justify-center p-6 text-center bg-gray-50 border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
+                  <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+                    <h3 className="text-3xl tracking-tight font-semibold text-gray-900 ">
+                      Accommodations
+                    </h3>
+                    <p className="mx-6 my-4">
+                      Every listing is garuenteed to be in proximity to reliable wifi, and work-friendly spaces.
+                    </p>
+                  </blockquote>
+                  <figcaption className="flex items-center justify-center ">
+                    <div className="flex items-center justify-center w-20 h-20 mx-auto bg-blue-50 rounded-full">
+                      <div className="text-5xl">💻</div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <figure className="flex flex-col items-center justify-center p-6 text-center bg-gray-50 border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
+                  <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+                    <h3 className="text-3xl font-semibold tracking-tight text-gray-900 ">
+                      Booking Options
+                    </h3>
+                    <p className="mx-6 my-4">
+                    Listings offer last-minute bookings, and the ability to modify reservations easily.
+                    </p>
+                  </blockquote>
+                  <figcaption className="flex items-center justify-center ">
+                    <div className="flex items-center justify-center w-20 h-20 mx-auto bg-blue-50 rounded-full">
+                      <div className="text-5xl">✈️</div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <figure className="flex flex-col items-center justify-center p-6 text-center bg-gray-50 border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
+                  <blockquote className="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 ">
+                    <h3 className="text-3xl tracking-tight font-semibold text-gray-900 ">
+                      Pricing
+                    </h3>
+                    <p className="mx-6 my-4">
+                      We promise a add-on charge policy for every listing. Price comes from the housing providor straight to you.
+                    </p>
+                  </blockquote>
+                  <figcaption className="flex items-center justify-center ">
+                    <div className="flex items-center justify-center w-20 h-20 mx-auto bg-blue-50 rounded-full">
+                      <div className="text-5xl">💰</div>
+                    </div>
+                  </figcaption>
+                </figure>
+              </div>
             </div>
           </div>
         </section>
@@ -99,25 +157,19 @@ export default function Home() {
 
       <div className="p-12 bg-yellow-50"></div>
 
-      
-
       <section className="bg-yellow-50">
         <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-          <div className="mx-auto max-w-lg text-center">
-            <h2 className="text-3xl font-bold sm:text-4xl">
+          <div className="mx-auto max-w-lg text-center pb-10">
+            <h1 className="text-3xl tracking-tight font-bold sm:text-3xl md:text-4xl lg:text-5xl text-gray-900">
               Explore Locations 🌎
-            </h2>
+            </h1>
 
-            <p className="mt-4">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Consequuntur aliquam doloribus nesciunt eos fugiat. Vitae aperiam
-              fugit consequuntur saepe laborum.
-            </p>
+            
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
             <a
-              href="#"
+              href="/locations"
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
@@ -143,7 +195,7 @@ export default function Home() {
             </a>
 
             <a
-              href="#"
+              href="/locations"
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
@@ -169,7 +221,7 @@ export default function Home() {
             </a>
 
             <a
-              href="#"
+              href="/locations"
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
@@ -196,7 +248,7 @@ export default function Home() {
             </a>
 
             <a
-              href="#"
+              href="/locations"
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
@@ -222,7 +274,7 @@ export default function Home() {
             </a>
 
             <a
-              href="#"
+              href="/locations"
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
@@ -247,7 +299,7 @@ export default function Home() {
             </a>
 
             <a
-              href="#"
+              href="/locations"
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
@@ -275,35 +327,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-yellow-50 to-gray-100">
-        <div className="mx-auto max-w-screen-xl px-4 py-24 lg:py-40 lg:flex lg:items-center">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-3xl font-bold sm:text-4xl">
-              AI Technology means
-              <strong className="font-bold text-emerald-700 sm:block">
-                {" "}
-                Better Destinations.{" "}
-              </strong>
-            </h1>
-
-            <p className="mt-4 sm:text-xl/relaxed">
-              Our AI-based recommendation system analyzes your preferences,
-              providing curated destinations for work and adventure.{" "}
-            </p>
-
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <a
-                className="block w-full rounded bg-emerald-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-emerald-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-                href="/get-started"
-              >
-                Get Started with Nomad Insights
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      
+      <div className="py-16 bg-yellow-50 "></div>
     </main>
   );
 }

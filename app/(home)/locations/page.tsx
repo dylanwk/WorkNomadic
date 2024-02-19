@@ -19,11 +19,11 @@ const locations = () => {
         <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center md:w-2/3 lg:w-1/2 xl:w-2/3 md:text-left">
             <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-4xl lg:text-5xl">
-              The Searchbar for Nomads. Coming Soon. 🌎
+              The Searchbar is currently down, but try our AI Destination Finder.
             </h2>
             <p className="mt-4 text-base text-gray-200">
               Our Team is doing everything they can to get it back to running.
-              But join this list to get notified when we are up and running.
+              Join this list to get notified when we are up and running.
             </p>
 
             <form action="#" method="POST" className="mt-8 lg:mt-12">
@@ -103,7 +103,7 @@ const locations = () => {
                 <div className="text-5xl">💻</div>
               </div>
               <h3 className="mt-8 text-lg font-semibold text-black">
-                Work-Friendly Accomidations
+                Work-Friendly Accommodations
               </h3>
               <p className="mt-4 text-sm text-gray-600">
                 All rentals on Nomadic Page are tailored for working remote.

@@ -45,7 +45,7 @@ export default function QuestionForm() {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen bg-gray-50 rounded-lg shadow-md">
         <div className="hero-content text-center">
           <form onSubmit={handleSubmit}>
             <div className="max-w-lg">
