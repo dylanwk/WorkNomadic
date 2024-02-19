@@ -1,5 +1,5 @@
 import { getDestinationImage } from "@/app/utils/getImage";
-import ai from "../../../utils/openai";
+import ai from "../../../utils/aiObject";
 
 type UserResponses = Record<string, string>;
 
@@ -10,6 +10,7 @@ type DestinationItem = {
 };
 
 export default async function Destination({ searchParams }: any) {
+  'use server'
   const formResponses: UserResponses = {};
   const destination: DestinationItem[] = [];
 
