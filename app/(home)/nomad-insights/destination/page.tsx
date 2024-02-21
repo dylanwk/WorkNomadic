@@ -1,5 +1,6 @@
-import { getDestinationImage } from "@/app/utils/getImage";
-import ai from "../../../utils/aiObject";
+'use server'
+import { getDestinationImage } from "@/app/lib/actions/getImage";
+import ai from "../../../lib/ai";
 
 type UserResponses = Record<string, string>;
 
@@ -10,7 +11,6 @@ type DestinationItem = {
 };
 
 export default async function Destination({ searchParams }: any) {
-  'use server'
   const formResponses: UserResponses = {};
   const destination: DestinationItem[] = [];
 
@@ -44,6 +44,7 @@ export default async function Destination({ searchParams }: any) {
   const imageURL = await getDestinationImage(location);
 
   destination.push({ location, description, imageURL });
+
 
   return (
     <>

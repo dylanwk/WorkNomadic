@@ -237,7 +237,7 @@ export default function Home() {
                   <div className="mt-4">
                     <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
                       <p className="text-sm text-white">
-                        Known for its historic charm, Europe enchants it's
+                        Known for its historic charm, Europe enchants it&apos;s
                         travelers with centuries-old cultures and architectural
                         wonders.
                       </p>

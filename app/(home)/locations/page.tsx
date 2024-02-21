@@ -134,7 +134,7 @@ const locations = () => {
             </h2>
 
             <p className="mt-4 text-gray-700 text-lg mb-6">
-              Discover Nomadic Page's AI-leveraging Travel Recommendation
+              Discover Nomadic Page&apos;s AI-leveraging Travel Recommendation
               System. <br />
               Your no-cost tool for finding the best travel destinations.
             </p>
