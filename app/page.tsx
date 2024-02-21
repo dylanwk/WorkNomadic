@@ -54,6 +54,7 @@ export default function Home() {
               quality={100}
               height={541}
               width={390}
+              loading="lazy"
               
             />
             <Image
@@ -63,6 +64,7 @@ export default function Home() {
               height={541}
               width={390}
               quality={100}
+              loading="lazy"
               
             />
           </div>
