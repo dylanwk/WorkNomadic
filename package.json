@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "npx prettier --write ."
   },
   "dependencies": {
     "@types/node": "20.10.4",
@@ -31,6 +32,7 @@
     "typescript": "5.3.3"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.7"
+    "@tailwindcss/forms": "^0.5.7",
+    "prettier": "^3.2.5"
   }
 }

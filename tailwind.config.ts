@@ -12,11 +12,11 @@ module.exports = {
     extend: {},
   },
   plugins: [
-  require("daisyui"),
-  require('@tailwindcss/forms'),
-  require("tailwindcss-animation-delay"),
-],
+    require("daisyui"),
+    require("@tailwindcss/forms"),
+    require("tailwindcss-animation-delay"),
+  ],
   daisyui: {
     themes: ["corporate", "coffee"],
   },
-}
+};

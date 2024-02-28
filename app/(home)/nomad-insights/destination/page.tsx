@@ -1,6 +1,6 @@
-'use server'
-import { getDestinationImage } from "@/app/lib/actions/getImage";
-import ai from "../../../lib/ai";
+'use server';
+import { getDestinationImage } from '@/app/lib/actions/getImage';
+import ai from '../../../lib/ai';
 
 type UserResponses = Record<string, string>;
 
@@ -29,22 +29,21 @@ export default async function Destination({ searchParams }: any) {
     "and explain why. In format Location, Country - Description. Make an informative description around 60 words. Do NOT add 'Location: ' to beggining of response";
 
   const response = await ai.chat.completions.create({
-    model: "gpt-3.5-turbo",
-    messages: [{ role: "user", content: textPrompt }],
+    model: 'gpt-3.5-turbo',
+    messages: [{ role: 'user', content: textPrompt }],
     temperature: 0,
-    max_tokens: 2000,
+    max_tokens: 2000
   });
 
   const entry = JSON.stringify(response.choices[0].message.content).replace(
     /^"|"$/g,
-    ""
+    ''
   );
 
-  const [location, description] = entry.split(" - ");
+  const [location, description] = entry.split(' - ');
   const imageURL = await getDestinationImage(location);
 
   destination.push({ location, description, imageURL });
-
 
   return (
     <>

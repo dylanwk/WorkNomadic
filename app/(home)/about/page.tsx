@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const about = () => {
   return (
@@ -93,7 +93,7 @@ const about = () => {
                 </div>
               </div>
               <div className="mx-auto max-w-screen-sm text-sm text-left text-gray-500 newsletter-form-footer ">
-                We care about the protection of your data.{" "}
+                We care about the protection of your data.{' '}
                 <a
                   href="#"
                   className="font-medium text-blue-500 hover:underline"
@@ -107,7 +107,6 @@ const about = () => {
         </div>
       </section>
       <div className="py-16"></div>
-
     </section>
   );
 };

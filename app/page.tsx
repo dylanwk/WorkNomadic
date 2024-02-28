@@ -1,8 +1,8 @@
-import { url } from "inspector";
-import Image from "next/image";
+import { url } from 'inspector';
+import Image from 'next/image';
 
-import Link from "next/link";
-import path from "path";
+import Link from 'next/link';
+import path from 'path';
 //src="https://api.time.com/wp-content/uploads/2022/07/Worlds-Greatest-Places-2022-BaliIndonesia.jpeg?quality=85&w=1600"
 
 //The Nomad Page is a digital nomad-based travel agency. We provide
@@ -55,7 +55,6 @@ export default function Home() {
               height={541}
               width={390}
               loading="lazy"
-              
             />
             <Image
               className="mt-4 lg:mt-10 rounded-lg"
@@ -65,7 +64,6 @@ export default function Home() {
               width={390}
               quality={100}
               loading="lazy"
-              
             />
           </div>
         </div>
@@ -82,12 +80,11 @@ export default function Home() {
                 <div className="relative inline-flex">
                   <span className="absolute inset-x-0 bottom-0 border-b-[30px] border-[#c5ce7f]"></span>
                   <h1 className="relative text-3xl font-bold text-black sm:text-3xl md:text-4xl lg:text-5xl">
-                    {" "}
+                    {' '}
                     For Digital Nomads.
                   </h1>
                 </div>
               </h1>
-           
 
               <div className="grid mb-8 border border-gray-200 rounded-lg shadow-sm  md:mb-12 md:grid-cols-2 bg-gray-50 ">
                 <figure className="flex flex-col items-center justify-center p-6 text-center bg-gray-50 border-b border-gray-200 rounded-t-lg md:rounded-t-none md:rounded-ss-lg md:border-e">
@@ -96,8 +93,9 @@ export default function Home() {
                       Locations
                     </h3>
                     <p className="mx-6 my-4">
-                      All locations are in close proximity to ammendities such as cafes,
-                      restaurants, grocery stores, and coworking spaces
+                      All locations are in close proximity to ammendities such
+                      as cafes, restaurants, grocery stores, and coworking
+                      spaces
                     </p>
                   </blockquote>
                   <figcaption className="flex items-center justify-center ">
@@ -112,7 +110,8 @@ export default function Home() {
                       Accommodations
                     </h3>
                     <p className="mx-6 my-4">
-                      Every listing is garuenteed to be in proximity to reliable wifi, and work-friendly spaces.
+                      Every listing is garuenteed to be in proximity to reliable
+                      wifi, and work-friendly spaces.
                     </p>
                   </blockquote>
                   <figcaption className="flex items-center justify-center ">
@@ -127,7 +126,8 @@ export default function Home() {
                       Booking Options
                     </h3>
                     <p className="mx-6 my-4">
-                    Listings offer last-minute bookings, and the ability to modify reservations easily.
+                      Listings offer last-minute bookings, and the ability to
+                      modify reservations easily.
                     </p>
                   </blockquote>
                   <figcaption className="flex items-center justify-center ">
@@ -142,7 +142,8 @@ export default function Home() {
                       Pricing
                     </h3>
                     <p className="mx-6 my-4">
-                      We promise a add-on charge policy for every listing. Price comes from the housing providor straight to you.
+                      We promise a add-on charge policy for every listing. Price
+                      comes from the housing providor straight to you.
                     </p>
                   </blockquote>
                   <figcaption className="flex items-center justify-center ">
@@ -165,8 +166,6 @@ export default function Home() {
             <h1 className="text-3xl tracking-tight font-bold sm:text-3xl md:text-4xl lg:text-5xl text-gray-900">
               Explore Locations 🌎
             </h1>
-
-            
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -175,7 +174,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  "url(https://images.travelandleisureasia.com/wp-content/uploads/sites/5/2023/11/17141542/cape-town-africa.jpeg)",
+                  'url(https://images.travelandleisureasia.com/wp-content/uploads/sites/5/2023/11/17141542/cape-town-africa.jpeg)'
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
@@ -201,7 +200,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  "url(https://www.planetware.com/wpimages/2019/10/asia-best-places-to-visit-mount-fuji-japan.jpg)",
+                  'url(https://www.planetware.com/wpimages/2019/10/asia-best-places-to-visit-mount-fuji-japan.jpg)'
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
@@ -227,7 +226,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  "url(https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-471662379-1380x1035.jpg)",
+                  'url(https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-471662379-1380x1035.jpg)'
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
@@ -254,7 +253,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  "url(https://i0.wp.com/www.tripstodiscover.com/wp-content/uploads/2016/07/bigstock-Beautiful-view-of-Palau-island-86974844.jpg?resize=784%2C588)",
+                  'url(https://i0.wp.com/www.tripstodiscover.com/wp-content/uploads/2016/07/bigstock-Beautiful-view-of-Palau-island-86974844.jpg?resize=784%2C588)'
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
@@ -280,7 +279,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  "url(https://i.natgeofe.com/n/cb160852-0cbe-402c-883a-a18e6cbe32dd/6647.jpg?w=1084.125&h=813.75)",
+                  'url(https://i.natgeofe.com/n/cb160852-0cbe-402c-883a-a18e6cbe32dd/6647.jpg?w=1084.125&h=813.75)'
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">
@@ -305,7 +304,7 @@ export default function Home() {
               className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl"
               style={{
                 backgroundImage:
-                  'url("https://hips.hearstapps.com/hmg-prod/images/long-boat-docked-on-beach-in-krabi-thailand-summers-royalty-free-image-1622044679.jpg")',
+                  'url("https://hips.hearstapps.com/hmg-prod/images/long-boat-docked-on-beach-in-krabi-thailand-summers-royalty-free-image-1622044679.jpg")'
               }}
             >
               <div className=" hero-overlay bg-opacity-50 rounded-xl">

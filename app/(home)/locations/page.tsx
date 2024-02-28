@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const locations = () => {
   return (
@@ -19,7 +19,8 @@ const locations = () => {
         <div className="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="text-center md:w-2/3 lg:w-1/2 xl:w-2/3 md:text-left">
             <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-4xl lg:text-5xl">
-              The Searchbar is currently down, but try our AI Destination Finder.
+              The Searchbar is currently down, but try our AI Destination
+              Finder.
             </h2>
             <p className="mt-4 text-base text-gray-200">
               Our Team is doing everything they can to get it back to running.
@@ -40,9 +41,9 @@ const locations = () => {
                         stroke="currentColor"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.5"
                           d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
                         />
                       </svg>
@@ -188,8 +189,6 @@ const locations = () => {
           </a>
         </div>
       </section>
-
-      
     </>
   );
 };

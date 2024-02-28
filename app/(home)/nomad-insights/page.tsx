@@ -1,5 +1,5 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
 const InsightPage = () => {
   return (
@@ -18,7 +18,6 @@ const InsightPage = () => {
                   Tailored Recommendations
                 </h3>
                 <p className="text-gray-500 ">
-                  
                   By understanding preferences such as activities and budget,
                   our algorithm generates customized recommendations, ensuring a
                   more enjoyable trip.
@@ -26,7 +25,9 @@ const InsightPage = () => {
               </div>
               <div>
                 <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full  lg:h-12 lg:w-12 "></div>
-                <h3 className="mb-2 text-2xl font-bold ">Discover Hidden Gem</h3>
+                <h3 className="mb-2 text-2xl font-bold ">
+                  Discover Hidden Gem
+                </h3>
                 <p className="text-gray-500 ">
                   Our TRS highlights hidden gems and lesser-known destinations
                   that match user preferences. By considering a variety of
@@ -36,7 +37,9 @@ const InsightPage = () => {
               </div>
               <div>
                 <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 "></div>
-                <h3 className="mb-2 text-2xl font-bold ">Effortless Planning</h3>
+                <h3 className="mb-2 text-2xl font-bold ">
+                  Effortless Planning
+                </h3>
                 <p className="text-gray-500 ">
                   With our TRS, travel planning becomes effortless. By answering
                   a few questions, users receive tailored recommendations,
@@ -51,8 +54,8 @@ const InsightPage = () => {
                   type="button"
                   className="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-8 py-3 me-2 mb-2 mt-10 "
                 >
-                  {" "}
-                  Start{" "}
+                  {' '}
+                  Start{' '}
                 </button>
               </Link>
             </div>

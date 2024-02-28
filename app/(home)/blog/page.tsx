@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const joinNomadPage = () => {
   return (
@@ -21,7 +21,8 @@ const joinNomadPage = () => {
               </h3>
               <span className="text-xs text-gray-400">February 19, 2021</span>
               <p>
-                This country was ranked the most visited digital nomad country of 2023.
+                This country was ranked the most visited digital nomad country
+                of 2023.
               </p>
             </div>
           </a>

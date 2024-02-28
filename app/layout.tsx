@@ -1,17 +1,17 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Header from "./components/Header";
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import Header from './components/Header';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "The Nomad Page",
-  description: "Destination Generator",
+  title: 'The Nomad Page',
+  description: 'Destination Generator'
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
@@ -32,12 +32,12 @@ export default function RootLayout({
         <footer className="bg-gray-50">
           <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
             <div className="flex justify-center text-teal-600">
-              <div className="text-lg tracking-tight font-bold">the nomad page.</div>
+              <div className="text-lg tracking-tight font-bold">
+                the nomad page.
+              </div>
             </div>
 
-            <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-              
-            </p>
+            <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500"></p>
 
             <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
               <li>
@@ -45,8 +45,8 @@ export default function RootLayout({
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="/about"
                 >
-                  {" "}
-                  About{" "}
+                  {' '}
+                  About{' '}
                 </a>
               </li>
 
@@ -55,8 +55,8 @@ export default function RootLayout({
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="/careers"
                 >
-                  {" "}
-                  Careers{" "}
+                  {' '}
+                  Careers{' '}
                 </a>
               </li>
 
@@ -65,8 +65,8 @@ export default function RootLayout({
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="/locations"
                 >
-                  {" "}
-                  Explore{" "}
+                  {' '}
+                  Explore{' '}
                 </a>
               </li>
 
@@ -75,8 +75,8 @@ export default function RootLayout({
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="/contact"
                 >
-                  {" "}
-                  Contact{" "}
+                  {' '}
+                  Contact{' '}
                 </a>
               </li>
 
@@ -85,8 +85,8 @@ export default function RootLayout({
                   className="text-gray-700 transition hover:text-gray-700/75"
                   href="/blog"
                 >
-                  {" "}
-                  Blog{" "}
+                  {' '}
+                  Blog{' '}
                 </a>
               </li>
             </ul>
@@ -156,10 +156,6 @@ export default function RootLayout({
                   </svg>
                 </a>
               </li>
-
-              
-
-              
             </ul>
           </div>
         </footer>
