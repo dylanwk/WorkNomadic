@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "npx prettier --write ."
+    "format": "npx prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.10.4",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
+    "husky": "^9.0.11",
     "prettier": "^3.2.5"
   }
 }

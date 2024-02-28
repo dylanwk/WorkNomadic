@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios')
 
 export async function getDestinationImage(destinationName: string) {
   const apiKey = process.env.IMAGE_API_KEY;
@@ -15,7 +15,9 @@ export async function getDestinationImage(destinationName: string) {
       return 'Error';
     }
   } catch (error) {
-    console.error('Error fetching image:');
-    return 'Error';
+
+
+    console.error('Error fetching image:')
+    return 'Error'
   }
 }
