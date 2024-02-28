@@ -26,7 +26,7 @@ const InsightPage = () => {
               <div>
                 <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full  lg:h-12 lg:w-12 "></div>
                 <h3 className="mb-2 text-2xl font-bold ">
-                  Discover Hidden Gem
+                  Discover Hidden Gems
                 </h3>
                 <p className="text-gray-500 ">
                   Our TRS highlights hidden gems and lesser-known destinations
