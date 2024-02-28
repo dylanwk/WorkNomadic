@@ -1,7 +1,7 @@
 export type DestinationItem = {
   location: string;
   description: string;
-  img: string;
+  imageURL: string;
 };
 
 export type UserResponses = Record<string, string | number>;

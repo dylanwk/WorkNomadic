@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const InsightPage = () => {
+const NomadInsights = () => {
   return (
     <>
       <section className="bg-yellow-50">
@@ -66,4 +66,4 @@ const InsightPage = () => {
   );
 };
 
-export default InsightPage;
+export default NomadInsights;

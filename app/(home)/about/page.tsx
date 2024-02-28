@@ -1,6 +1,6 @@
 import React from 'react';
 
-const about = () => {
+const About = () => {
   return (
     <section className="bg-yellow-50">
       <div className="pt-16"></div>
@@ -111,4 +111,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

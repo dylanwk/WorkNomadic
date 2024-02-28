@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactPage = () => {
+const Contact = () => {
   return (
     <section className="bg-yellow-50">
       <section className="text-gray-900 pt-6 ">
@@ -68,4 +68,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+export default Contact;

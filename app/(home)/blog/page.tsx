@@ -1,6 +1,6 @@
 import React from 'react';
 
-const joinNomadPage = () => {
+const Blog = () => {
   return (
     <div>
       <section className="bg-yellow-50 text-gray-100 pt-20">
@@ -180,4 +180,4 @@ const joinNomadPage = () => {
   );
 };
 
-export default joinNomadPage;
+export default Blog;

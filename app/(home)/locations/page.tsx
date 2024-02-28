@@ -1,6 +1,6 @@
 import React from 'react';
 
-const locations = () => {
+const Locations = () => {
   return (
     <>
       <section className="relative px-10 py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-48">
@@ -193,4 +193,4 @@ const locations = () => {
   );
 };
 
-export default locations;
+export default Locations;

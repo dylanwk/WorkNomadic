@@ -1,6 +1,6 @@
-const axios = require('axios')
+const axios = require('axios');
 
-export async function getDestinationImage(destinationName: string) {
+export async function getImage(destinationName: string) {
   const apiKey = process.env.IMAGE_API_KEY;
   const cx = '123dc09aea7fb4e5c';
   const apiUrl = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(destinationName)}&cx=${cx}&searchType=image&key=${apiKey}`;
@@ -15,9 +15,7 @@ export async function getDestinationImage(destinationName: string) {
       return 'Error';
     }
   } catch (error) {
-
-
-    console.error('Error fetching image:')
-    return 'Error'
+    console.error('Error fetching image:');
+    return 'Error';
   }
 }
