@@ -1,8 +1,7 @@
 'use server';
-import { getImage } from '@/app/lib/actions/getImage';
+import { getImage } from '@/app/lib/utils/get-image';
 import ai from '../../../lib/ai';
 import { DestinationItem, UserResponses } from '@/app/lib/types';
-
 
 export default async function Destination({ searchParams }: any) {
   const formResponses: UserResponses = {};
@@ -63,4 +62,3 @@ export default async function Destination({ searchParams }: any) {
     </>
   );
 }
-
