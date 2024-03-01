@@ -18,11 +18,9 @@ const Contact: FC = () => {
 
   function onSubmit(data: FormData) {
     sendEmail(data);
-    return(
-      toast({
-        description: "Your message has been sent.",
-      })
-    )
+    return toast({
+      description: 'Your message has been sent.'
+    });
   }
 
   return (
