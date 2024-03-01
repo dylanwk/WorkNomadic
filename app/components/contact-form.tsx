@@ -2,20 +2,27 @@
 
 import { FC } from 'react';
 import { useForm } from 'react-hook-form';
-import { sendEmail } from '@/app/lib/utils/send-email';
+import { sendEmail } from '@/app/lib/actions/send-email';
+import { useToast } from '@/components/ui/use-toast';
 
 export type FormData = {
-  // TODO: add name field
   email: string;
   name: string;
   message: string;
 };
 
 const Contact: FC = () => {
+  const { toast } = useToast();
+
   const { register, handleSubmit } = useForm<FormData>();
 
   function onSubmit(data: FormData) {
     sendEmail(data);
+    return(
+      toast({
+        description: "Your message has been sent.",
+      })
+    )
   }
 
   return (

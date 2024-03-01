@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <div className="p-2 bg-yellow-50"></div>
 
-      <section className="  bg-yellow-50">
+      <section className="bg-yellow-50">
         <div className="grid max-w-screen-2xl px-4 py-8 items-center mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-2">
           <div className="mr-auto px-3 pr-8 pl-6 place-self-center">
             <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900">

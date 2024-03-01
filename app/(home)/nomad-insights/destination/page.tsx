@@ -1,5 +1,5 @@
 'use server';
-import { getImage } from '@/app/lib/utils/get-image';
+import { getImage } from '@/app/lib/actions/get-image';
 import ai from '../../../lib/ai';
 import { DestinationItem, UserResponses } from '@/app/lib/types';
 

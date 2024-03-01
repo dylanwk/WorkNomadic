@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Header from './components/Header';
+import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         <Header />
 
         {children}
+        <Toaster />
 
         <footer className="bg-gray-50">
           <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
