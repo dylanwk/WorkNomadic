@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { FC } from 'react';
-import { useForm } from 'react-hook-form';
-import { sendEmail } from '@/app/lib/actions/send-email';
-import { useToast } from '@/components/ui/use-toast';
+import { FC } from "react";
+import { useForm } from "react-hook-form";
+import { sendEmail } from "@/app/api/actions/send-email";
+import { useToast } from "@/components/ui/use-toast";
 
 export type FormData = {
   email: string;
@@ -19,7 +19,7 @@ const Contact: FC = () => {
   function onSubmit(data: FormData) {
     sendEmail(data);
     return toast({
-      description: 'Your message has been sent.'
+      description: "Your message has been sent.",
     });
   }
 
@@ -33,7 +33,7 @@ const Contact: FC = () => {
           type="text"
           className="shadow-sm bg-gray-50 border border-gray-300 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
           placeholder="Full Name"
-          {...register('name', { required: true })}
+          {...register("name", { required: true })}
         />
       </div>
       <div>
@@ -45,7 +45,7 @@ const Contact: FC = () => {
           id="subject"
           className="block p-3 w-full text-sm bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
           placeholder="example@domain.com"
-          {...register('email', { required: true })}
+          {...register("email", { required: true })}
         />
       </div>
       <div className="sm:col-span-2">
@@ -56,7 +56,7 @@ const Contact: FC = () => {
           rows={4}
           className="block p-2.5 w-full text-sm bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
           placeholder="Leave a comment..."
-          {...register('message', { required: true })}
+          {...register("message", { required: true })}
         ></textarea>
       </div>
       <button

@@ -1,7 +1,8 @@
 'use server';
-import { getImage } from '@/app/lib/actions/get-image';
-import ai from '../../../lib/ai';
-import { DestinationItem, UserResponses } from '@/app/lib/types';
+import { getImage } from '@/app/api/actions/get-image';
+import ai from '../../../../lib/ai';
+import { DestinationItem, UserResponses } from '@/lib/data';
+import Image from 'next/image';
 
 export default async function Destination({ searchParams }: any) {
   const formResponses: UserResponses = {};
@@ -41,20 +42,24 @@ export default async function Destination({ searchParams }: any) {
   return (
     <>
       {destination.map(({ location, description, imageURL }) => (
-        <section className="bg-yellow-50 min-h-screen" key={location}>
-          <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
-            <img
-              className="w-full rounded-lg"
-              src={imageURL}
-              alt="dashboard image"
-            />
-            <div className="mt-4 md:mt-0">
-              <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">
-                {location}
-              </h2>
-              <p className="mb-6 font-light text-gray-600 md:text-lg ">
-                {description}
-              </p>
+        <section className="bg-background min-h-screen" key={location}>
+          <div className="mx-auto max-w-screen-xl px-4 py-8 sm:py-16 lg:px-6">
+            <div className="grid gap-8 items-center md:grid-cols-2">
+              <img
+                className="w-full rounded-lg"
+                src={imageURL}
+                alt={`Image of ${location}`}
+                width={500}
+                height={500}
+              />
+              <div>
+                <h2 className="mb-4 text-4xl font-extrabold tracking-tight">
+                  {location}
+                </h2>
+                <p className="mb-6 text-lg font-light text-gray-600">
+                  {description}
+                </p>
+              </div>
             </div>
           </div>
         </section>

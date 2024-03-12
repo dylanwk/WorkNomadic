@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const Header = () => {
   return (
-    <header className="bg-yellow-50">
+    <header className="bg-background">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex-1 md:flex md:items-center md:gap-12">
@@ -20,8 +20,8 @@ const Header = () => {
                     className="text-gray-900 transition hover:text-gray-500"
                     href="/about"
                   >
-                    {' '}
-                    What is Nomad Page?{' '}
+                    {" "}
+                    What is Nomad Page?{" "}
                   </a>
                 </li>
 
@@ -30,8 +30,8 @@ const Header = () => {
                     className="text-gray-900 transition hover:text-gray-500"
                     href="/locations"
                   >
-                    {' '}
-                    Locations{' '}
+                    {" "}
+                    Locations{" "}
                   </a>
                 </li>
 
@@ -40,8 +40,8 @@ const Header = () => {
                     className="text-gray-900 transition hover:text-gray-500"
                     href="/contact"
                   >
-                    {' '}
-                    Contact{' '}
+                    {" "}
+                    Contact{" "}
                   </a>
                 </li>
               </ul>

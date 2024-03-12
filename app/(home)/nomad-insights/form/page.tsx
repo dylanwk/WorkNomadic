@@ -1,9 +1,15 @@
-import DestinationForm from '@/app/components/destination-form';
+import DestinationForm from '@/components/destination-form';
+import FormCard from '@/components/ui/form-card';
 
 const Form = () => {
   return (
-    <div className="flex flex-col items-center bg-yellow-50">
-      <div className="max-w-screen-md min-h-[100vh] w-full flex flex-col py-10">
+    <div className="flex flex-col items-center bg-background min-h-screen">
+      <div className="w-full pt-16 pb-14 px-8">
+        <h1 className="text-3xl font-bold text-center">
+          Answer these questions about your dream adventure destination. 🌴
+        </h1>
+      </div>
+      <div className="w-full flex flex-col items-center justify-center">
         <DestinationForm />
       </div>
     </div>
