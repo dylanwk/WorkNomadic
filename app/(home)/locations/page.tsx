@@ -93,8 +93,8 @@ const Locations = () => {
                 Fast & Easy Booking
               </h3>
               <p className="mt-4 text-sm text-gray-600">
-                Book straight from the provider&apos;s site, no hassling with 3rd
-                party vendors.
+                Book straight from the provider&apos;s site, no hassling with
+                3rd party vendors.
               </p>
             </div>
 
@@ -134,8 +134,8 @@ const Locations = () => {
             </h2>
 
             <p className="mt-4 text-gray-700 text-lg mb-6">
-              Discover your next destination with Nomadic Page&apos;s AI-leveraging
-              Travel Recommendation System. <br />
+              Discover your next destination with Nomadic Page&apos;s
+              AI-leveraging Travel Recommendation System. <br />
             </p>
           </div>
 
@@ -159,7 +159,7 @@ const Locations = () => {
           <Link href="/nomad-insights">
             <Button
               size={'lg'}
-              variant={'secondary'}
+              variant={'default'}
               className="justify-center mt-14 text-md"
             >
               Find My Destination

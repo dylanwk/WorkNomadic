@@ -48,9 +48,9 @@ export default function DestinationForm() {
   return (
     <DndProvider backend={HTML5Backend}>
       <section className="bg-gray-100 rounded-3xl shadow-lg p-4 sm:p-6 lg:p-8">
-        <form onSubmit={handleSubmit} className="mx-auto max-w-md space-y-4">
-          <div className="mx-auto max-w-lg text-center p-4">
-            <h1 className="text-4xl font-bold sm:text-4xl">
+        <form onSubmit={handleSubmit} className="mx-auto max-w-lg space-y-4">
+          <div className="mx-auto max-w-md text-center p-2">
+            <h1 className="text-2xl font-bold sm:text-3xl">
               {currentQuestion.label}
             </h1>
           </div>
@@ -65,7 +65,7 @@ export default function DestinationForm() {
                   type="text"
                   id={currentQuestion.id}
                   placeholder={currentQuestion.description}
-                  className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
+                  className="w-full rounded-lg border-gray-200 p-2 sm:p-4 text-sm sm:text-base shadow-sm"
                   value={userResponses[currentQuestion.id] || ""}
                   onChange={(e) => handleOpenEndedChange(e.target.value)}
                   required
@@ -81,7 +81,7 @@ export default function DestinationForm() {
               </label>
               <select
                 id={currentQuestion.id}
-                className="w-full bg-gray-50 border border-gray-300 text-md rounded-lg focus:ring-primary focus:border-primary p-4 pe-12 shadow-sm"
+                className="w-full bg-gray-50 border border-gray-300 text-sm sm:text-base rounded-lg focus:ring-primary focus:border-primary p-2 sm:p-4 shadow-sm"
                 value={userResponses[currentQuestion.id] || ""}
                 onChange={(e) =>
                   setUserResponses({
@@ -103,8 +103,8 @@ export default function DestinationForm() {
             </div>
           )}
 
-          <div className="flex items-center justify-center py-4">
-            <Button type="submit" size="lg">
+          <div className="flex items-center justify-center py-2">
+            <Button type="submit" size="default">
               {currentQuestionIndex < questions.length - 1
                 ? "Next Question"
                 : "Get Recommendation"}

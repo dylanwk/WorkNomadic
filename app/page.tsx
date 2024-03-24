@@ -1,8 +1,24 @@
+'use client';
 import { Button, buttonVariants } from '@/components/ui/button';
+import Autoplay from 'embla-carousel-autoplay';
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function Home() {
+  const plugin = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  );
+
   return (
     <main>
       <section className="bg-background">
@@ -153,105 +169,50 @@ export default function Home() {
 
       {/* TODO: Replace url links with loaded pictures */}
 
-      <section className="">
-        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-          <div className="mx-auto max-w-lg text-center pb-10">
+      <section className="p-12">
+        <div className="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-12 lg:px-8 lg:py-8">
+          <div className="mx-auto max-w-3xl text-center pb-10">
             <h1 className="text-3xl tracking-tight font-bold sm:text-3xl md:text-4xl lg:text-5xl text-gray-900">
-              Explore Locations 🌎
+              Explore our most popular Locations 🌎
             </h1>
           </div>
+        </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-            <Link
-              href={'/locations'}
-              className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl py-10"
-              style={{
-                backgroundImage:
-                  'url(https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-471662379-1380x1035.jpg)'
-              }}
-            >
-              <div className="relative p-4 sm:p-6 lg:p-8">
-                <p className="text-2xl text-white sm:text-3xl text-center font-bold">
-                  Asia
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              href={'/locations'}
-              className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl py-10"
-              style={{
-                backgroundImage:
-                  'url(https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-471662379-1380x1035.jpg)'
-              }}
-            >
-              <div className="relative p-4 sm:p-6 lg:p-8">
-                <p className="text-2xl text-white sm:text-3xl text-center font-bold">
-                  Asia
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              href={'/locations'}
-              className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl py-10"
-              style={{
-                backgroundImage:
-                  'url(https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-471662379-1380x1035.jpg)'
-              }}
-            >
-              <div className="relative p-4 sm:p-6 lg:p-8">
-                <p className="text-2xl text-white sm:text-3xl text-center font-bold">
-                  Europe
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              href={'/locations'}
-              className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl py-10"
-              style={{
-                backgroundImage:
-                  'url(https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-471662379-1380x1035.jpg)'
-              }}
-            >
-              <div className="relative p-4 sm:p-6 lg:p-8">
-                <p className="text-2xl text-white sm:text-3xl text-center font-bold">
-                  Oceania
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              href={'/locations'}
-              className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl py-10"
-              style={{
-                backgroundImage:
-                  'url(https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-471662379-1380x1035.jpg)'
-              }}
-            >
-              <div className="relative p-4 sm:p-6 lg:p-8">
-                <p className="text-2xl text-white sm:text-3xl text-center font-bold">
-                  South America
-                </p>
-              </div>
-            </Link>
-
-            <Link
-              href={'/locations'}
-              className="group relative block max-h-min bg-black bg-cover bg-center rounded-xl p-10"
-              style={{
-                backgroundImage:
-                  'url(https://www.jetsetter.com//uploads/sites/7/2019/04/GettyImages-471662379-1380x1035.jpg)'
-              }}
-            >
-              <div className="relative p-4 sm:p-6 lg:p-8">
-                <p className="text-2xl text-white sm:text-3xl text-center font-bold">
-                  View All
-                </p>
-              </div>
-            </Link>
-          </div>
+        <div className="flex justify-center pb-10">
+          <Carousel
+            plugins={[plugin.current]}
+            className=" max-w-4xl px-4 sm:px-0"
+            onMouseEnter={plugin.current.stop}
+            onMouseLeave={plugin.current.reset}
+          >
+            <CarouselContent>
+              <CarouselItem>
+                <Card>
+                  <CardContent className="flex items-center justify-center">
+                    <img
+                      src="images/rio-pic.jpeg"
+                      alt="Location 1"
+                      className="w-full"
+                    />
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+              <CarouselItem>
+                <Card>
+                  <CardContent className="flex items-center justify-center max-h-fit">
+                    <img
+                      src="images/oceania-pic.jpeg"
+                      alt="Location 1"
+                      className=""
+                    />
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+              {/* Add more CarouselItem components with different images */}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </section>
 
