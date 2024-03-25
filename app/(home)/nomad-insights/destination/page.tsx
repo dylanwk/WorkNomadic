@@ -1,7 +1,7 @@
 'use server';
 import { getImage } from '@/app/api/actions/get-image';
 import ai from '../../../../lib/ai';
-import { DestinationItem, UserResponses } from '@/lib/data';
+import { DestinationItem, UserResponses } from '@/lib/types';
 import Image from 'next/image';
 
 export default async function Destination({ searchParams }: any) {

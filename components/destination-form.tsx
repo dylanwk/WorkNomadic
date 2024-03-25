@@ -1,6 +1,6 @@
 "use client";
 
-import { UserResponses, questions } from "@/lib/data";
+import { UserResponses, questions } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { DndProvider } from "react-dnd";
