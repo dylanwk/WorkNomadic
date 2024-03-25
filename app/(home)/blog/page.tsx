@@ -13,7 +13,11 @@ const Blog = () => {
       <section className="md:grid md:grid-cols-2 flex flex-col gap-10">
         {articles !== null &&
           Object.keys(articles).map((article) => (
-            <ArticleItemList category={article} articles={articles[article]} key={article}/>
+            <ArticleItemList
+              category={article}
+              articles={articles[article]}
+              key={article}
+            />
           ))}
       </section>
     </section>

@@ -64,9 +64,7 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
-
 }
-
 
 .article {
   @apply flex flex-col gap-3 text-lg tracking-wide mb-20;
@@ -99,8 +97,6 @@
 .article > p > img {
   @apply w-1/2 mx-auto;
 }
-
-
 
 @layer base {
   * {
