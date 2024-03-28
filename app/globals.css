@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 99%; /* background */
+    --background: 0 0% 99%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%; /* primary text and buttons */
+    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -67,15 +67,19 @@
 }
 
 .article {
-  @apply flex flex-col gap-3 text-lg tracking-wide mb-20;
+  @apply flex flex-col gap-3 text-lg mb-20;
+}
+
+.article > p {
+  @apply font-serif;
 }
 
 .article > h1 {
-  @apply text-4xl text-center tracking-tight;
+  @apply font-extrabold text-left text-4xl md:text-6xl tracking-tight py-8;
 }
 
 .article > h2 {
-  @apply text-3xl tracking-tight;
+  @apply text-3xl font-bold tracking-tight pt-2;
 }
 
 .article > ol {
@@ -95,7 +99,11 @@
 }
 
 .article > p > img {
-  @apply w-1/2 mx-auto;
+  @apply w-full mx-auto rounded-lg mb-6;
+}
+
+.article > h3 {
+  @apply text-center text-sm -mt-6 font-light mb-4;
 }
 
 @layer base {

@@ -21,12 +21,14 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/icon.png" sizes="any" />
-        <title>Work Nomadic | Vacation rentals for digital nomads & more</title>
+        <title>
+          Work Nomadically | Vacation rentals for digital nomads & more
+        </title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
 
-      <body data-theme="corporate" className={inter.className}>
+      <body>
         <Header />
 
         {children}

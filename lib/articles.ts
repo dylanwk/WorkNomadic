@@ -25,11 +25,12 @@ const getSortedArticles = (): ArticleItem[] => {
       title: matterResult.data.title,
       date: matterResult.data.date,
       category: matterResult.data.category,
+      image: matterResult.data.image,
     };
   });
 
   return allArticlesData.sort((a, b) => {
-    const format = "DD-MM-YYYY";
+    const format = "MM-DD-YYYY";
     const dateOne = moment(a.date, format);
     const dateTwo = moment(b.date, format);
 
@@ -74,6 +75,7 @@ export const getArticleData = async (id: string) => {
     contentHtml,
     title: matterResult.data.title,
     category: matterResult.data.category,
-    date: moment(matterResult.data.date, "DD-MM-YYYY").format("MMMM Do YYYY"),
+    date: moment(matterResult.data.date, "MM-DD-YYYY").format("MMMM Do YYYY"),
+    image: matterResult.data.image,
   };
 };

@@ -1,12 +1,15 @@
 ---
-title: "the benefits of a digital nomad lifestyle"
-category: "lifestyle"
+title: "The Benefits of a Digital Nomad lifestyle"
+category: "LIFESTYLE"
 date: "03-02-2024"
+image: "/images/patagonia-pic.png"
 ---
 
 # The Benefits of Embracing the Digital Nomad Lifestyle
 
-![Art](images/oceania-pic.jpeg)
+![Art](/images/oceania-pic.jpeg)
+
+### _Picture of Oceania_
 
 In recent years, the rise of remote work and digital entrepreneurship has led to the emergence of a new breed of professionals - digital nomads. These individuals have embraced a lifestyle that allows them to work from anywhere in the world, relying on technology to stay connected and productive. While the digital nomad lifestyle may not be for everyone, it offers a multitude of benefits that appeal to adventurous souls and those seeking greater freedom and flexibility in their lives.
 

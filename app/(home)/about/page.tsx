@@ -26,7 +26,7 @@ const About = () => {
           <img
             className="w-full rounded-lg"
             src="https://www.touristcardmx.com/user/sites/www.touristcardmx.com/pages/03.news/mexico-digital-nomad-visa/mexico-digital-nomad-visa.jpg"
-            alt="dashboard image"
+            alt="digital nomad"
           />
 
           <div className="mt-4 md:mt-0">
