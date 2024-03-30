@@ -11,7 +11,10 @@ const ArticleItemList = ({ articles, category }: Props) => {
   return (
     <>
       {articles.map((article, id) => (
-        <div key={id} className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+        <div
+          key={id}
+          className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink"
+        >
           <div className="flex-1 bg-white rounded-xl overflow-hidden shadow-lg">
             <Link
               href={`/blog/${article.id}`}

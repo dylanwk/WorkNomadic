@@ -1,5 +1,7 @@
 import ArticleItemList from '@/components/ArticleListItem';
+import { Button } from '@/components/ui/button';
 import { getCategorizedArticles } from '@/lib/articles';
+import Link from 'next/link';
 import React from 'react';
 
 const Blog = () => {
@@ -12,18 +14,17 @@ const Blog = () => {
           <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
             Want to be a Digital Nomad? 🌍
           </h1>
-          <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">
+          <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-10 lg:px-40">
             Curious how you can master surfing in Costa Rica while still
             excelling in your professional career? Get the latest tips on remote
             work and travel from around the globe.
           </p>
-          <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"></div>
         </div>
       </section>
 
       {/*-- <!--Container--> --*/}
-      <div className="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
-        <div className="mx-0 sm:mx-6">
+      <div className="max-w-screen-xl px-4 md:px-4 mx-auto -mt-32">
+        <div className="mx-4 sm:mx-4">
           <div className="w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
             {/*-- <!--Posts Container--> --*/}
             <div className="flex flex-wrap justify-between pt-12 -mx-6">
@@ -36,6 +37,27 @@ const Blog = () => {
                   />
                 ))}
             </div>
+          </div>
+        </div>
+
+        <div className="flex w-full items-center font-sans p-8 md:p-14">
+          <div className="w-10 h-10 rounded-full mr-4 text-4xl">🌴</div>
+
+          <div className="flex-1">
+            <p className="font-bold text-base md:text-xl leading-none">
+              Want to write for us?
+            </p>
+            <p className="text-gray-600 text-xs md:text-base">
+              Share your expert tips and city guides! Join Work Nomadically as a
+              writer and help others discover new destinations.{' '}
+            </p>
+          </div>
+          <div className="justify-end">
+            <Link href="post.html">
+              <Button className="bg-transparent border border-primary text-xs text-gray-500 hover:text-white font-bold py-2 px-4 rounded-full">
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
