@@ -1,5 +1,5 @@
 'use client';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import Autoplay from 'embla-carousel-autoplay';
 
 import {
@@ -15,10 +15,6 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function Home() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 5000, stopOnInteraction: true })
-  );
-
   return (
     <main>
       <section className="bg-background">
@@ -55,20 +51,19 @@ export default function Home() {
             <Image
               className="rounded-lg"
               src="/images/homePic2.png"
-              alt=""
+              alt="Bali Destination"
               quality={100}
               height={541}
               width={390}
-              loading="lazy"
+              loading="eager"
             />
             <Image
               className="mt-4 lg:mt-10 rounded-lg"
               src="/images/homePic1.png"
-              alt=""
+              alt="European Destination"
               height={541}
               width={390}
               quality={100}
-              loading="lazy"
             />
           </div>
         </div>
@@ -168,53 +163,6 @@ export default function Home() {
       <div className="p-12"></div>
 
       {/* TODO: Replace url links with loaded pictures */}
-
-      <section className="p-12">
-        <div className="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 sm:py-12 lg:px-8 lg:py-8">
-          <div className="mx-auto max-w-3xl text-center pb-10">
-            <h1 className="text-3xl tracking-tight font-bold sm:text-3xl md:text-4xl lg:text-5xl text-gray-900">
-              Explore our most popular Locations 🌎
-            </h1>
-          </div>
-        </div>
-
-        <div className="flex justify-center pb-10">
-          <Carousel
-            plugins={[plugin.current]}
-            className=" max-w-4xl px-4 sm:px-0"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
-          >
-            <CarouselContent>
-              <CarouselItem>
-                <Card>
-                  <CardContent className="flex items-center justify-center">
-                    <img
-                      src="images/rio-pic.jpeg"
-                      alt="Location 1"
-                      className="w-full"
-                    />
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-              <CarouselItem>
-                <Card>
-                  <CardContent className="flex items-center justify-center max-h-fit">
-                    <img
-                      src="images/oceania-pic.jpeg"
-                      alt="Location 1"
-                      className=""
-                    />
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-              {/* Add more CarouselItem components with different images */}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-      </section>
 
       <div className="py-8"></div>
     </main>

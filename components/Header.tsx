@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Header = () => {
   return (
@@ -8,7 +9,13 @@ const Header = () => {
           <div className="flex-1 md:flex md:items-center md:gap-12">
             <a className="block text-teal-600" href="/">
               <span className="sr-only">Home</span>
-              <img className="h-16" src="/images/icon.png" alt="logo"></img>
+              <Image
+                className=""
+                src="/images/icon.png"
+                alt="logo"
+                height={75}
+                width={280}
+              ></Image>
             </a>
           </div>
 
