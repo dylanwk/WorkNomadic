@@ -79,7 +79,7 @@
 }
 
 .article > h2 {
-  @apply text-3xl font-bold tracking-tight pt-2;
+  @apply text-3xl font-bold tracking-tight pt-5;
 }
 
 .article > ol {

@@ -6,15 +6,14 @@ const Header = () => {
     <header className="bg-background">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
-          <div className="flex-1 md:flex md:items-center md:gap-12">
+          <div className="flex-1 md:flex md:items-start">
             <a className="block text-teal-600" href="/">
-              <span className="sr-only">Home</span>
               <Image
                 className=""
-                src="/images/icon.png"
-                alt="logo"
-                height={75}
-                width={280}
+                src="/images/vagaspace2.png"
+                alt="company logo"
+                height={70}
+                width={270}
               ></Image>
             </a>
           </div>
@@ -28,7 +27,7 @@ const Header = () => {
                     href="/about"
                   >
                     {" "}
-                    What is Nomad Page?{" "}
+                    What is Vagaspace?{" "}
                   </a>
                 </li>
 

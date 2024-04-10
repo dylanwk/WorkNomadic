@@ -106,7 +106,7 @@ const Locations = () => {
                 Work-Friendly Rentals
               </h3>
               <p className="mt-4 text-sm text-gray-600">
-                All rentals on Nomadic Page are tailored for those who working
+                All rentals on Vagaspace are tailored for those who working
                 remote.
               </p>
             </div>
@@ -134,8 +134,8 @@ const Locations = () => {
             </h2>
 
             <p className="mt-4 text-gray-700 text-lg mb-6">
-              Discover your next destination with Nomadic Page&apos;s
-              AI-leveraging Travel Recommendation System. <br />
+              Discover your next destination with Vagaspace&apos;s AI-leveraging
+              Travel Recommendation System. <br />
             </p>
           </div>
 

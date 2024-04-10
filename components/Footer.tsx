@@ -5,9 +5,7 @@ const Footer = () => {
     <footer className="bg-gray-50">
       <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex justify-center text-teal-600">
-          <div className="text-lg tracking-tight font-bold">
-            the nomad page.
-          </div>
+          <div className="text-lg tracking-tight font-bold">vagaspace.</div>
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500"></p>

@@ -48,12 +48,12 @@ const Blog = () => {
               Want to write for us?
             </p>
             <p className="text-gray-600 text-xs md:text-base">
-              Share your expert tips and city guides! Join Work Nomadically as a
-              writer and help others discover new destinations.{' '}
+              Share your expert tips and city guides! Join Vagaspace as a writer
+              and help others discover new destinations.{' '}
             </p>
           </div>
           <div className="justify-end">
-            <Link href="post.html">
+            <Link href="/blog/write-for-us">
               <Button className="bg-transparent border border-primary text-xs text-gray-500 hover:text-white font-bold py-2 px-4 rounded-full">
                 Learn More
               </Button>

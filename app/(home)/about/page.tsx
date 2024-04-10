@@ -11,11 +11,11 @@ const About = () => {
           </h2>
 
           <p className="mb-4 font-light">
-            Nomad Page specializes in housing that goes beyond expectations.
-            Each space is carefully selected, ensuring it aligns with the
-            demands of remote workers. We know that work is a vital part of your
-            adventure. Our accommodations come with features like high-speed
-            internet and close proximity to dedicated workspaces.
+            Vagaspace specializes in housing that goes beyond expectations. Each
+            space is carefully selected, ensuring it aligns with the demands of
+            remote workers. We know that work is a vital part of your adventure.
+            Our accommodations come with features like high-speed internet and
+            close proximity to dedicated workspaces.
           </p>
         </div>
       </div>
@@ -35,7 +35,7 @@ const About = () => {
               freedom to work and life anywhere.
             </h2>
             <p className="mb-6 font-light text-gray-500 md:text-lg ">
-              Nomad Page is focusing on crafting a world where individuals can
+              Vagaspace is focusing on crafting a world where individuals can
               truly live their best lives, unrestrained by conventional
               boundaries. We believe in the freedom to work and live anywhere,
               and our commitment is to make this vision a reality for you.

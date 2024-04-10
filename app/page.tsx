@@ -24,7 +24,7 @@ export default function Home() {
               Destinations for Digital Nomads.
             </h1>
             <p className="max-w-2xl mb-6 font-light text-gray-700 lg:mb-8 md:text-lg lg:text-xl">
-              We are a travel agency designed for those who work remote.
+              We are a housing provider made for those who work remote.
             </p>
             <Button size={'lg'} asChild>
               <Link
@@ -76,7 +76,7 @@ export default function Home() {
           <div className="px-4 mx-auto max-w-6xl sm:px-6 lg:px-8">
             <div className="grid items-center text-center grid-cols-1 gap-12">
               <h1 className="text-3xl tracking-tight font-bold text-gray-900 sm:text-3xl md:text-4xl lg:text-5xl">
-                A Travel Agency by Digital Nomads.&nbsp; <br></br>
+                A Business by Digital Nomads.&nbsp; <br></br>
                 <div className="relative inline-flex">
                   <span className="absolute inset-x-0 bottom-0 border-b-[30px] border-[#c5ce7f]"></span>
                   <h1 className="relative text-3xl font-bold text-black sm:text-3xl md:text-4xl lg:text-5xl">
