@@ -19,9 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/icon.png" sizes="any" />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <title>
-          Work Nomadically | Vacation rentals for digital nomads & more
+          Vagaspace | Vacation rentals for digital nomads, & more
         </title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
