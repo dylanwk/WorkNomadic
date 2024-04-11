@@ -51,12 +51,10 @@ const Footer = () => {
             </a>
           </li>
         </ul>
-
-        
-
       </div>
-      <div className="text-sm font-extralight justify-right text-left pt-10 p-6">© 2024 Vagaspace</div>
-
+      <div className="text-sm font-extralight justify-right text-left pt-10 p-6">
+        © 2024 Vagaspace
+      </div>
     </footer>
   );
 };
