@@ -1,14 +1,16 @@
-'use server';
 import { getImage } from '@/app/api/actions/get-image';
 import ai from '../../../../lib/ai';
 import { DestinationItem, UserResponses } from '@/lib/types';
-import Image from 'next/image';
+
+export const dynamic = 'force-dynamic';
+
 
 export default async function Destination({ searchParams }: any) {
-  const formResponses: UserResponses = {};
   const destination: DestinationItem[] = [];
 
   // populate form response
+  const formResponses: UserResponses = {};
+
   for (const [key, value] of Object.entries(searchParams)) {
     formResponses[key] = value as string;
   }
@@ -24,8 +26,8 @@ export default async function Destination({ searchParams }: any) {
 
   const response = await ai.chat.completions.create({
     model: 'gpt-3.5-turbo',
-    messages: [{ role: 'user', content: textPrompt }],
-    temperature: 0,
+    messages: [{ role: 'assistant', content: textPrompt }],
+    temperature: 1.5,
     max_tokens: 2000
   });
 
