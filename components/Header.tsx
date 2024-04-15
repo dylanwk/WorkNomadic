@@ -84,7 +84,7 @@ const Header = () => {
 
                   <DropdownMenuContent>
                     <Link href={"/about"}>
-                      <DropdownMenuItem >What is Vagaspace</DropdownMenuItem>
+                      <DropdownMenuItem>What is Vagaspace</DropdownMenuItem>
                     </Link>
                     <Link href={"/locations"}>
                       <DropdownMenuItem>Locations</DropdownMenuItem>
