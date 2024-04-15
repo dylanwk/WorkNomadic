@@ -52,7 +52,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="text-sm font-extralight justify-right text-left pt-10 p-6">
+      <div className=" text-xs font-extralight tracking-tight justify-right text-left pt-8 p-4">
         © 2024 Vagaspace
       </div>
     </footer>

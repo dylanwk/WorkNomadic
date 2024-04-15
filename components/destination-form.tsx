@@ -47,41 +47,33 @@ export default function DestinationForm() {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <section className="bg-gray-100 rounded-3xl shadow-lg p-4 sm:p-6 lg:p-8">
-        <form onSubmit={handleSubmit} className="mx-auto max-w-lg space-y-4">
-          <div className="mx-auto max-w-md text-center p-2">
-            <h1 className="text-2xl font-bold sm:text-3xl">
+      <section className="bg-gray-100 rounded-lg shadow-lg p-4 sm:p-6 lg:p-8 mx-auto max-w-lg">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="text-center">
+            <h1 className="text-lg sm:text-xl md:text-2xl font-bold">
               {currentQuestion.label}
             </h1>
           </div>
 
           {currentQuestion.type === "open-ended" && (
             <div>
-              <label htmlFor={currentQuestion.id} className="sr-only">
-                {currentQuestion.label}
-              </label>
-              <div className="relative">
-                <input
-                  type="text"
-                  id={currentQuestion.id}
-                  placeholder={currentQuestion.description}
-                  className="w-full rounded-lg border-gray-200 p-2 sm:p-4 text-sm sm:text-base shadow-sm"
-                  value={userResponses[currentQuestion.id] || ""}
-                  onChange={(e) => handleOpenEndedChange(e.target.value)}
-                  required
-                />
-              </div>
+              <input
+                type="text"
+                id={currentQuestion.id}
+                placeholder={currentQuestion.description}
+                className="w-full rounded-lg border-gray-200 p-2 sm:p-3 text-base shadow-sm"
+                value={userResponses[currentQuestion.id] || ""}
+                onChange={(e) => handleOpenEndedChange(e.target.value)}
+                required
+              />
             </div>
           )}
 
           {currentQuestion.type === "multiple-choice" && (
             <div>
-              <label htmlFor={currentQuestion.id} className="sr-only">
-                {currentQuestion.label}
-              </label>
               <select
                 id={currentQuestion.id}
-                className="w-full bg-gray-50 border border-gray-300 text-sm sm:text-base rounded-lg focus:ring-primary focus:border-primary p-2 sm:p-4 shadow-sm"
+                className="w-full bg-gray-50 border border-gray-300 text-base rounded-lg focus:ring-primary focus:border-primary p-2 sm:p-3 shadow-sm"
                 value={userResponses[currentQuestion.id] || ""}
                 onChange={(e) =>
                   setUserResponses({
@@ -103,8 +95,8 @@ export default function DestinationForm() {
             </div>
           )}
 
-          <div className="flex items-center justify-center py-2">
-            <Button type="submit" size="default">
+          <div className="py-2">
+            <Button type="submit" size="sm">
               {currentQuestionIndex < questions.length - 1
                 ? "Next Question"
                 : "Get Recommendation"}

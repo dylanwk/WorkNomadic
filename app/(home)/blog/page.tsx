@@ -44,10 +44,10 @@ const Blog = () => {
           <div className="w-10 h-10 rounded-full mr-4 text-4xl">🌴</div>
 
           <div className="flex-1">
-            <p className="font-bold text-base md:text-xl leading-none">
+            <p className="font-bold text-base md:text-xl leading-none mr-6">
               Want to write for us?
             </p>
-            <p className="text-gray-600 text-xs md:text-base">
+            <p className="text-gray-600 text-xs md:text-base hidden sm:block">
               Share your expert tips and city guides! Join Vagaspace as a writer
               and help others discover new destinations.{' '}
             </p>

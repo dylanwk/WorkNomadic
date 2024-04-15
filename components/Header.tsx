@@ -6,6 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -63,7 +64,7 @@ const Header = () => {
               <div className="block md:hidden">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <button>
+                    <button className="rounded-xl">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5"
@@ -80,10 +81,17 @@ const Header = () => {
                       </svg>
                     </button>
                   </DropdownMenuTrigger>
+
                   <DropdownMenuContent>
-                    <DropdownMenuItem>What is Vagaspace</DropdownMenuItem>
-                    <DropdownMenuItem>Locations</DropdownMenuItem>
-                    <DropdownMenuItem>Contact</DropdownMenuItem>
+                    <Link href={"/about"}>
+                      <DropdownMenuItem >What is Vagaspace</DropdownMenuItem>
+                    </Link>
+                    <Link href={"/locations"}>
+                      <DropdownMenuItem>Locations</DropdownMenuItem>
+                    </Link>
+                    <Link href={"/contact"}>
+                      <DropdownMenuItem>Contact</DropdownMenuItem>
+                    </Link>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>
