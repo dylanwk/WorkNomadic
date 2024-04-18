@@ -14,14 +14,14 @@ export default async function Destination({ searchParams }: any) {
     formResponses[key] = value as string;
   }
 
-  let textPrompt = `you are a travel recommendation engine for digital nomads. Find a destination that fits all of these preferences: \n`;
+  let textPrompt = `You are a travel recommendation engine for digital nomads. Given the user's preferences:\n`;
 
   for (const key in formResponses) {
     textPrompt += `${key} : ${formResponses[key]}\n`;
   }
 
   textPrompt +=
-    "and explain why. In format Location, Country - Description. Make an informative description around 60 words. Do NOT add 'Location: ' to beggining of response";
+    "Please recommend a location that best fits the user's preferences. Enter the location, followed by a comma, then the country, and finally a dash, followed by a detailed description around 60 words explaining why this location is the best fit. Do not provide quotation marks in the description.";
 
   const response = await ai.chat.completions.create({
     model: 'gpt-3.5-turbo',
@@ -30,15 +30,21 @@ export default async function Destination({ searchParams }: any) {
     max_tokens: 2000
   });
 
-  const entry = JSON.stringify(response.choices[0].message.content).replace(
-    /^"|"$/g,
-    ''
-  );
+  const entry = response.choices[0]?.message.content
+    ?.trim()
+    ?.replace(/^"|"$/g, '');
 
-  const [location, description] = entry.split(' - ');
-  const imageURL = await getImage(location);
+  if (entry) {
+    const location = entry.substring(0, entry.indexOf('-')).trim();
+    const description = entry.substring(entry.indexOf('-') + 1).trim();
+    const imageURL = await getImage(location);
 
-  destination.push({ location, description, imageURL });
+    destination.push({ location, description, imageURL });
+  } else {
+    console.log("API ERROR");
+  }
+
+  //const [location, description] = entry.split(' - ');
 
   return (
     <>
