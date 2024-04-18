@@ -10,6 +10,4 @@ Since the COVID-19 pandemic, the digital nomad lifestyle has continued to gain m
 
 ## Tech Stack
 
-**Client:** React, TailwindCSS, ShadcnUI
-
-**Server:** Node, Next.js 14
+Next.js 14, Node, React
