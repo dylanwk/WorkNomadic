@@ -1,6 +1,13 @@
-'use client'
+"use client";
 import React from "react";
-import { TbBeach, TbBuildingSkyscraper, TbMountain, TbPool, TbSunset2, TbWindmill } from "react-icons/tb";
+import {
+  TbBeach,
+  TbBuildingSkyscraper,
+  TbMountain,
+  TbPool,
+  TbSunset2,
+  TbWindmill,
+} from "react-icons/tb";
 import { MdCoffee } from "react-icons/md";
 import { PiCoffee } from "react-icons/pi";
 import { FaSkiing } from "react-icons/fa";
@@ -30,7 +37,7 @@ export const categories = [
     label: "Urban",
     icon: TbBuildingSkyscraper,
     description: "This property is on the countryside!",
-  }, 
+  },
   {
     label: "Pools",
     icon: TbPool,
@@ -51,25 +58,23 @@ export const categories = [
     icon: FaSkiing,
     description: "This property is near a ski slope",
   },
-    {
+  {
     label: "Castles",
     icon: GiCastle,
     description: "This property is in a castle",
   },
-  
 ];
 
 export const Categories = () => {
-    const params = useSearchParams();
-    const category = params?.get('category');
-    const pathname = usePathname();
+  const params = useSearchParams();
+  const category = params?.get("category");
+  const pathname = usePathname();
 
-    const isMainPage = pathname === '/locations';
+  const isMainPage = pathname === "/locations";
 
-    if (!isMainPage) {
-        return null
-    }
-
+  if (!isMainPage) {
+    return null;
+  }
 
   return (
     <Container>

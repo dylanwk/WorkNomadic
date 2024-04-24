@@ -1,8 +1,10 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Header from '../components/Header';
+import Header from '../components/navbar/Header';
 import Footer from '../components/Footer';
+import RegisterModal from '@/components/modals/RegisterModal';
+import Navbar from '@/components/navbar/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,8 +29,8 @@ export default function RootLayout({
       </head>
 
       <body>
-        <Header />
-
+        <Navbar />
+        <RegisterModal />
         {children}
 
         <Footer />

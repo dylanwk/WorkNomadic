@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import {
@@ -7,6 +8,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Link from "next/link";
+import UserMenu from "./UserMenu";
+import Container from "../Container";
 
 const Header = () => {
   return (
@@ -16,7 +19,6 @@ const Header = () => {
           <div className="flex-1 md:flex md:items-start">
             <a className="block" href="/">
               <Image
-                className=""
                 src="/images/vagaspace2.png"
                 alt="company logo"
                 height={45}
@@ -27,40 +29,10 @@ const Header = () => {
 
           <div className="md:flex md:items-center md:gap-12">
             <nav aria-label="Global" className="hidden md:block">
-              <ul className="flex items-center gap-6 text-sm">
-                <li>
-                  <a
-                    className="text-primary-900 rounded-2xl transition hover:bg-gray-100 py-2.5 px-3"
-                    href="/about"
-                  >
-                    {" "}
-                    What is Vagaspace?{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-primary-900 rounded-2xl transition hover:bg-gray-100 py-2.5 px-3"
-                    href="/locations"
-                  >
-                    {" "}
-                    Locations{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    className="text-primary-900 rounded-2xl transition hover:bg-gray-100 py-2.5 px-3"
-                    href="/contact"
-                  >
-                    {" "}
-                    Contact{" "}
-                  </a>
-                </li>
-              </ul>
+              <UserMenu />
             </nav>
 
-            <div className="flex items-center gap-4">
+            {/*} <div className="flex items-center gap-4">
               <div className="block md:hidden">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -96,6 +68,7 @@ const Header = () => {
                 </DropdownMenu>
               </div>
             </div>
+  */}
           </div>
         </div>
       </div>

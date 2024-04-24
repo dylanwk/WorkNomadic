@@ -41,7 +41,7 @@ export default async function Destination({ searchParams }: any) {
 
     destination.push({ location, description, imageURL });
   } else {
-    console.log("API ERROR");
+    console.log('API ERROR');
   }
 
   //const [location, description] = entry.split(' - ');

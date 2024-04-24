@@ -39,7 +39,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
         url: "/locations/",
         query: updatedQuery,
       },
-      { skipNull: true }
+      { skipNull: true },
     );
 
     router.push(url);

@@ -1,5 +1,4 @@
 import { Categories } from '@/components/categories/Categories';
-import Container from '@/components/Container';
 import Searchbar from '@/components/searchbar/Searchbar';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -8,7 +7,7 @@ import React from 'react';
 const Locations = () => {
   return (
     <>
-      <section className="bg-center bg-no-repeat bg-cover bg-[url(/images/rio2.jpg)] bg-gray-300 bg-blend-multiply">
+      <section className="z-10 bg-center bg-no-repeat bg-cover bg-[url(/images/rio2.jpg)] bg-gray-300 bg-blend-multiply">
         <div className="px-4 mx-auto max-w-screen-xl text-center py-10 sm:py-20 lg:py-40">
           <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
             <div className="w-full sm:w-3/4 md:w-4/5 lg:w-3/4 py-4 ">
