@@ -1,4 +1,3 @@
-import { Categories } from '@/components/categories/Categories';
 import Searchbar from '@/components/searchbar/Searchbar';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -24,7 +23,6 @@ const Locations = () => {
           </h1>
         </div>
       </section>
-      <Categories />
 
       <section className="py-10 bg-background sm:py-16 lg:py-24">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">

@@ -6,7 +6,7 @@ import { useCallback, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
 import Modal from "./Modal";
-import Heading from "../Heading";
+import Heading from "./Heading";
 import { Input } from "../inputs/Input";
 import { Button } from "../ui/button";
 
@@ -75,7 +75,7 @@ const RegisterModal = () => {
   const footerCountent = (
     <div className="flex flex-col gap-4 mt-3">
       <hr />
-      <Button className='py-6' onClick={() => {}} variant="outline">
+      <Button className="py-6" onClick={() => {}} variant="outline">
         <FcGoogle className="mr-2 h-4 w-4" />
         Continue with Google
       </Button>
@@ -85,7 +85,7 @@ const RegisterModal = () => {
       </Button>
       <div className=" text-neutral-400 text-center mt-4 font-line">
         <div className="justify-center text-sm flex flex-row items-center gap-2">
-          <div>Already has an account?</div>
+          <div>Already have an account?</div>
           <div
             onClick={registerModal.onClose}
             className="text-neutral-800 cursor-pointer hover:underline"
