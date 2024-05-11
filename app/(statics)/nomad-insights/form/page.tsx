@@ -1,5 +1,4 @@
 import DestinationForm from '@/components/destination-form';
-import FormCard from '@/components/ui/form-card';
 
 const Form = () => {
   return (

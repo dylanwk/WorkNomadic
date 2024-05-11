@@ -1,4 +1,4 @@
-import ArticleItemList from '@/components/ArticleListItem';
+import ArticleItemList from './ArticleListItem';
 import { Button } from '@/components/ui/button';
 import { getCategorizedArticles } from '@/lib/articles';
 import Link from 'next/link';

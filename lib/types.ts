@@ -1,8 +1,17 @@
+import { Listing } from "@prisma/client";
+
 export type DestinationItem = {
   location: string;
   description: string;
   imageURL: string;
 };
+
+export type SafeListing = Omit<
+  Listing,
+  "createdAt"
+  > & {
+    createdAt: string,
+  }
 
 export type ArticleItem = {
   id: string;

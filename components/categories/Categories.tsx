@@ -21,7 +21,7 @@ export const categories = [
   {
     label: "Beach",
     icon: TbBeach,
-    desciption: "This property is close to the beach!",
+    description: "This property is close to the beach!",
   },
   {
     label: "Scenic",
@@ -65,12 +65,12 @@ export const categories = [
   },
 ];
 
-export const Categories = () => {
+const Categories: React.FC = () => {
   const params = useSearchParams();
   const category = params?.get("category");
   const pathname = usePathname();
 
-  const isMainPage = pathname === "/locations";
+  const isMainPage = pathname === "/";
 
   if (!isMainPage) {
     return null;
@@ -91,3 +91,5 @@ export const Categories = () => {
     </Container>
   );
 };
+
+export default Categories

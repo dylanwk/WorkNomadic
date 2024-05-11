@@ -1,16 +1,14 @@
-import './globals.css';
+import RegisterModal from '@/components/modals/RegisterModal';
+import RentModal from '@/components/modals/RentModal';
+import '@/styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Footer from '../components/Footer';
-import RegisterModal from '@/components/modals/RegisterModal';
-import Navbar from '@/components/navbar/Navbar';
-import RentModal from '@/components/modals/RentModal';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'The Nomad Page',
-  description: 'Destination Generator'
+  title: 'Vagaspace',
+  description: 'Housing providor for working remote'
 };
 
 export default function RootLayout({
@@ -28,13 +26,8 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
 
-      <body>
-        <Navbar />
-        <RegisterModal />
-        <RentModal />
-        {children}
-
-        <Footer />
+      <body className="min-h-screen bg-background antialiased">
+        <main>{children}</main>
       </body>
     </html>
   );

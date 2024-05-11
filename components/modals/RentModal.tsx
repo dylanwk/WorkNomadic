@@ -7,7 +7,13 @@ import { categories } from "../categories/Categories";
 import CategoryInput from "../inputs/CategoryInput";
 import { FieldValues, useForm } from "react-hook-form";
 import CountrySelect from "../inputs/CountrySelect";
-import Map from "../Map";
+import dynamic from "next/dynamic";
+
+
+const Map = dynamic(() => import("@/components/Map"), {
+  ssr: false
+})
+
 
 enum STEPS {
   CATEGORY = 0,
