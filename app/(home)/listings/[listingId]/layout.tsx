@@ -8,7 +8,5 @@ export default function HomeLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <div className='min-h-screen pt-8 pb-20'>{children}</div>
-  );
+  return <div className="min-h-screen pt-8 pb-20">{children}</div>;
 }

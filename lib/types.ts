@@ -6,12 +6,9 @@ export type DestinationItem = {
   imageURL: string;
 };
 
-export type SafeListing = Omit<
-  Listing,
-  "createdAt"
-  > & {
-    createdAt: string,
-  }
+export type SafeListing = Omit<Listing, "createdAt"> & {
+  createdAt: string;
+};
 
 export type ArticleItem = {
   id: string;

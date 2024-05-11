@@ -11,7 +11,6 @@ const Avatar = () => {
       alt="profile picture"
       src="/images/placeholder.jpg"
     />
-    
   );
 };
 

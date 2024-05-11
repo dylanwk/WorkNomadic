@@ -18,7 +18,6 @@ export default function RootLayout({
       <RentModal />
       {children}
       <Footer />
-      
     </div>
   );
 }

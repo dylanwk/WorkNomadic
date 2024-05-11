@@ -38,7 +38,6 @@ const ListingClient: React.FC<ListingClientProps> = ({ listing }) => {
               locationValue={listing.locationValue}
             />
           </div>
-          
         </div>
       </div>
     </Container>

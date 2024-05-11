@@ -1,6 +1,6 @@
-import Link from "next/link";
-import type { ArticleItem } from "@/lib/types";
-import Image from "next/image";
+import Link from 'next/link';
+import type { ArticleItem } from '@/lib/types';
+import Image from 'next/image';
 
 interface Props {
   category: string;

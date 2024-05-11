@@ -1,10 +1,8 @@
-import TestRegister from '@/components/modals/TestRegister'
-import React from 'react'
+import TestRegister from '@/components/modals/TestRegister';
+import React from 'react';
 
 const Page = () => {
-  return (
-    <TestRegister />
-  )
-}
+  return <TestRegister />;
+};
 
-export default Page
+export default Page;

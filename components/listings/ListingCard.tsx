@@ -42,7 +42,7 @@ const ListingCard: React.FC<ListingCard> = ({
 
       onAction?.(actionId);
     },
-    [onAction, actionId, disabled]
+    [onAction, actionId, disabled],
   );
 
   const price = useMemo(() => {
@@ -81,23 +81,23 @@ const ListingCard: React.FC<ListingCard> = ({
           </div>
         </div>
         <div className="font-semibold text-lg">
-            {location?.region}, {location?.label}
+          {location?.region}, {location?.label}
         </div>
         <div className="font-light text-neutral-500 ">
-            {reservationDate || data.category}
+          {reservationDate || data.category}
         </div>
         <div className="flex flex-row items-center gap-1">
-            <div className="font-semibold ">
-                $ {price}
-            </div>
-            {!reservation && (
-                <div className="font-light">night</div>
-            )}
+          <div className="font-semibold ">$ {price}</div>
+          {!reservation && <div className="font-light">night</div>}
         </div>
         {onAction && actionLabel && (
-            <Button disabled={disabled} size={'sm'} aria-label={actionLabel} onClick={handleCancel} />
+          <Button
+            disabled={disabled}
+            size={"sm"}
+            aria-label={actionLabel}
+            onClick={handleCancel}
+          />
         )}
-
       </div>
     </div>
   );

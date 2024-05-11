@@ -1,5 +1,4 @@
-
-import Image from 'next/image';
+import Image from "next/image";
 
 import useCountires from "@/app/hooks/useCountries";
 import React from "react";
@@ -22,9 +21,17 @@ const ListingHead: React.FC<ListingHeadProps> = ({
 
   return (
     <>
-      <Heading title={title} subtitle={`${location?.region}, ${location?.label}`}/>
+      <Heading
+        title={title}
+        subtitle={`${location?.region}, ${location?.label}`}
+      />
       <div className="w-full h-[65vh] overflow-hidden rounded-xl relative">
-        <Image alt="destination image" src={imageSrc} fill className='object-cover w-full object-bottom'/>
+        <Image
+          alt="destination image"
+          src={imageSrc}
+          fill
+          className="object-cover w-full object-bottom"
+        />
       </div>
     </>
   );

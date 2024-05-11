@@ -9,11 +9,9 @@ import { FieldValues, useForm } from "react-hook-form";
 import CountrySelect from "../inputs/CountrySelect";
 import dynamic from "next/dynamic";
 
-
 const Map = dynamic(() => import("@/components/Map"), {
-  ssr: false
-})
-
+  ssr: false,
+});
 
 enum STEPS {
   CATEGORY = 0,

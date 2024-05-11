@@ -11,13 +11,13 @@ const Navbar = () => {
         <Container>
           <div className="flex flex-row items-center justify-between gap-3 md:gap-0">
             <Link href={"/"}>
-            <Image
-              src={"/images/vagaspace2.png"}
-              height={45}
-              width={200}
-              alt="logo"
+              <Image
+                src={"/images/vagaspace2.png"}
+                height={45}
+                width={200}
+                alt="logo"
               />
-              </Link>
+            </Link>
             <UserMenu />
           </div>
         </Container>

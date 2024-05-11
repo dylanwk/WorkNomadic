@@ -52,7 +52,7 @@ const TestLogin = () => {
           variant={"outline"}
           className="p-4 m-8 border-0 transition absolute rounded-lg"
         >
-          <FaArrowLeft size={20} className="pr-2"/>
+          <FaArrowLeft size={20} className="pr-2" />
           Back
         </Button>
       </Link>

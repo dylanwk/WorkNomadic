@@ -41,11 +41,11 @@ const UserMenu = () => {
         <div className="absolute z-0 rounded-xl shadow-md w-[40vw] md:w-3/4 bg-white overflow-hidden right-0 top-12 text-sm">
           <div className="z-0 flex flex-col cursor-pointer">
             <>
-              <Link href={'/login'}>
-              <MenuItem onClick={() => {}} label="Login" />
+              <Link href={"/login"}>
+                <MenuItem onClick={() => {}} label="Login" />
               </Link>
-              <Link href={'/register'}>
-              <MenuItem label="Sign Up" />
+              <Link href={"/register"}>
+                <MenuItem label="Sign Up" />
               </Link>
             </>
           </div>
