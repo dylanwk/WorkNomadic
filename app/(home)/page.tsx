@@ -8,6 +8,7 @@ import getListings from '../api/actions/getListings';
 import ListingCard from '@/components/listings/ListingCard';
 import dynamic, { LoaderComponent } from 'next/dynamic';
 import CategorySkeleton from '@/components/categories/CategorySkeleton';
+import Image from 'next/image';
 
 export default async function Home() {
   const listings = await getListings();
@@ -28,22 +29,26 @@ export default async function Home() {
 
   return (
     <>
-      <section
-        className="z-10 bg-center bg-no-repeat bg-cover bg-gray-300 bg-blend-multiply"
-        style={{ backgroundImage: "url('/images/rio2.jpg')" }}
-      >
-        <div className="px-4 mx-auto max-w-screen-xl text-center py-10 sm:py-20 lg:py-35">
-          <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-            <div className="w-full sm:w-3/4 md:w-4/5 lg:w-3/4 py-4 ">
-              <div className="flex flex-row items-center justify-center gap-3 md:gap-0">
-                <Searchbar />
-              </div>
-            </div>
-          </div>
+      <section className="relative px-4 py-10 overflow-hidden bg-black sm:py-16 md:py-25 lg:py-28 xl:py-40">
+        <div className="absolute inset-0">
+          <Image
+            className="object-cover w-full h-full scale-200 object-left opacity-80"
+            src="/images/rio2.jpg"
+            alt="Rio de Janiero"
+            fill
+            sizes="100vw"
+            priority
+            quality={100}
+          />
         </div>
-        <div className="justify-end">
-          <h1 className="pb-4 pl-4 -mt-8 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-7xl">
-            Tailored to Nomads <br />
+
+        <div className="flex justify-center px-4 mx-auto max-w-7xl text-center pb-8 -mt-4">
+          <Searchbar />
+        </div>
+
+        <div className="absolute bottom-0 left-0 pb-4 pl-4">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight leading-none">
+            Tailored to Nomads <br className="hidden xl:block" />
             Like You.
           </h1>
         </div>
