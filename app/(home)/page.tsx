@@ -1,31 +1,21 @@
 import Container from '@/components/Container';
 import EmptyState from '@/components/EmptyState';
 import Searchbar from '@/components/searchbar/Searchbar';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import React from 'react';
-import getListings from '../api/actions/getListings';
+import getListings, { IListingParams } from '../api/actions/getListings';
 import ListingCard from '@/components/listings/ListingCard';
-import dynamic, { LoaderComponent } from 'next/dynamic';
 import CategorySkeleton from '@/components/categories/CategorySkeleton';
 import Image from 'next/image';
+import Categories from '@/components/categories/Categories';
 
-export default async function Home() {
-  const listings = await getListings();
+interface HomeProps {
+  searchParams: IListingParams;
+}
+
+const Home = async ({ searchParams }: HomeProps) => {
+  const listings = await getListings(searchParams);
 
   // TODO: add currentUser funcitonality
   const currentUser = null;
-
-  const Categories = dynamic(
-    () =>
-      import('@/components/categories/Categories').then(
-        (module) => module.default
-      ),
-    {
-      loading: () => <CategorySkeleton />,
-      ssr: false
-    }
-  );
 
   return (
     <>
@@ -47,7 +37,7 @@ export default async function Home() {
         </div>
 
         <div className="absolute bottom-0 left-0 pb-4 pl-4">
-          <h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight leading-none">
+          <h1 className="text-white text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-extrabold tracking-tight leading-none">
             Tailored to Nomads <br className="hidden xl:block" />
             Like You.
           </h1>
@@ -55,23 +45,26 @@ export default async function Home() {
       </section>
       {/* <Categories /> */}
       <Categories />
-      {listings.length === 0 ? (
+      {listings && listings.length === 0 ? (
         <EmptyState showReset />
       ) : (
         <Container>
           <div className="min-h-screen pt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8">
-            {listings.map((listing: any) => {
-              return (
-                <ListingCard
-                  key={listing.id}
-                  data={listing}
-                  currentUser={currentUser}
-                />
-              );
-            })}
+            {listings &&
+              listings.map((listing: any) => {
+                return (
+                  <ListingCard
+                    key={listing.id}
+                    data={listing}
+                    currentUser={currentUser}
+                  />
+                );
+              })}
           </div>
         </Container>
       )}
     </>
   );
-}
+};
+
+export default Home;

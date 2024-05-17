@@ -2,9 +2,9 @@ import ArticleItemList from './ArticleListItem';
 import { Button } from '@/components/ui/button';
 import { getCategorizedArticles } from '@/lib/articles';
 import Link from 'next/link';
-import React from 'react';
 
-const Blog = () => {
+export default function Blog() {
+  
   const articles = getCategorizedArticles();
 
   return (
@@ -63,6 +63,4 @@ const Blog = () => {
       </div>
     </>
   );
-};
-
-export default Blog;
+}

@@ -27,10 +27,11 @@ const ListingHead: React.FC<ListingHeadProps> = ({
       />
       <div className="w-full h-[65vh] overflow-hidden rounded-xl relative">
         <Image
-          alt="destination image"
+          alt="Destination Image"
           src={imageSrc}
           fill
           className="object-cover w-full object-bottom"
+          loading="lazy"
         />
       </div>
     </>

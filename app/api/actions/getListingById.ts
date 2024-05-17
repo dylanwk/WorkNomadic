@@ -26,6 +26,6 @@ export default async function getListingById(params: IParams) {
       createdAt: listing.createdAt.toISOString()
     };
   } catch (error: any) {
-    throw new Error(error);
+    return null;
   }
 }
