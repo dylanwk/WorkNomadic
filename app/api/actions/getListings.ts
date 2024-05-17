@@ -7,12 +7,10 @@ export interface IListingParams {
   startDate?: string;
   endDate?: string;
   locationValue?: string;
-  category?: string
+  category?: string;
 }
 
-export default async function getListings(
-  params: IListingParams
-) {
+export default async function getListings(params: IListingParams) {
   try {
     const {
       roomCount,
@@ -24,7 +22,7 @@ export default async function getListings(
       category
     } = params;
 
-    let query: any = {}
+    let query: any = {};
 
     if (category) {
       query.category = category;
@@ -33,25 +31,24 @@ export default async function getListings(
     if (roomCount) {
       query.roomCount = {
         gte: +roomCount
-      }
+      };
     }
 
     if (guestCount) {
       query.guestCount = {
         gte: +guestCount
-      }
+      };
     }
 
     if (bathroomCount) {
       query.bathroomCount = {
         gte: +bathroomCount
-      }
+      };
     }
 
     if (locationValue) {
       query.locationValue = locationValue;
     }
-
 
     const listings = await db.listing.findMany({
       where: query,
@@ -67,6 +64,6 @@ export default async function getListings(
 
     return safeListings;
   } catch (error: any) {
-    return; 
+    return;
   }
 }

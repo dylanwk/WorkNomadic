@@ -3,7 +3,6 @@ import { ArrowLeftIcon } from '@heroicons/react/24/solid';
 import { getArticleData } from '@/lib/articles';
 
 const Article = async ({ params }: { params: { slug: string } }) => {
-  
   const articleData = await getArticleData(params.slug);
 
   return (

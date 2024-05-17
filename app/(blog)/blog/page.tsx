@@ -4,7 +4,6 @@ import { getCategorizedArticles } from '@/lib/articles';
 import Link from 'next/link';
 
 export default function Blog() {
-  
   const articles = getCategorizedArticles();
 
   return (

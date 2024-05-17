@@ -43,7 +43,6 @@ const Searchbar = () => {
             </div>
           </div>
         </div>
-        
       </div>
     </div>
   );

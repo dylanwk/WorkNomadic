@@ -4,7 +4,7 @@ import ListingSkeleton from '@/components/listings/ListingSkeleton';
 import dynamic from 'next/dynamic';
 
 const Listing = dynamic(() => import('./ListingClient'), {
-  loading: () => <ListingSkeleton />,
+  loading: () => <ListingSkeleton />
 });
 
 interface IParams {

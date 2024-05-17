@@ -57,8 +57,7 @@ const TestRegister = () => {
       {/* <!-- Left Pane --> */}
       <div className="hidden lg:flex items-center justify-center flex-1 bg-white text-black">
         <div className="max-w-md text-center">
-        <LuPalmtree size={50} />
-
+          <LuPalmtree size={50} />
         </div>
       </div>
       {/* <!-- Right Pane --> */}

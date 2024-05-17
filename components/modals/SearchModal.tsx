@@ -42,7 +42,7 @@ const SearchModal = () => {
       dynamic(() => import("../Map"), {
         ssr: false,
       }),
-    []
+    [],
   );
 
   const onBack = useCallback(() => {
@@ -85,7 +85,7 @@ const SearchModal = () => {
         url: "/",
         query: updateQuery,
       },
-      { skipNull: true }
+      { skipNull: true },
     );
 
     setStep(STEPS.LOCATION);

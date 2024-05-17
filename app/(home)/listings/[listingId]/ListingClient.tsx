@@ -15,16 +15,17 @@ const initialDateRange = {
   startDate: new Date(),
   endDate: new Date(),
   key: 'selection'
-}
+};
 
 interface ListingClientProps {
   reservations?: Reservation[];
   listing: SafeListing;
 }
 
-const ListingClient: React.FC<ListingClientProps> = ({ listing, reservations = [] }) => {
-
-
+const ListingClient: React.FC<ListingClientProps> = ({
+  listing,
+  reservations = []
+}) => {
   const category = useMemo(() => {
     return categories.find((item) => item.label === listing.category);
   }, [listing.category]);

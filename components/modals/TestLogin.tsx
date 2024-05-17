@@ -80,7 +80,6 @@ const TestLogin = () => {
                 register={register}
                 errors={errors}
                 required
-                
               />
             </div>
             <div>

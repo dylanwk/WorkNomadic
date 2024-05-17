@@ -13,7 +13,7 @@ interface InputProps {
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors;
   transparent?: boolean;
-  center?: boolean
+  center?: boolean;
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -26,7 +26,7 @@ export const Input: React.FC<InputProps> = ({
   required,
   errors,
   transparent,
-  center
+  center,
 }) => {
   return (
     <div className="w-full relative">
@@ -60,7 +60,6 @@ export const Input: React.FC<InputProps> = ({
           ${transparent ? "font-semibold text-white" : "text-neutral-500"}
           `}
       >
-        
         {label}
       </label>
     </div>

@@ -14,7 +14,7 @@ export default function HomeLayout({
       <header>
         <Navbar />
       </header>
-      
+
       <div className="min-h-screen pb-10">{children}</div>
       <SearchModal />
       <Footer />
