@@ -23,11 +23,11 @@ const Searchbar = () => {
   return (
     <div
       onClick={searchModal.onOpen}
-      className=" border-[1px] w-full md:w-4/5 py-3.5 rounded-full shadow-sm hover:shadow-md transition cursor-pointer text-white backdrop-filter backdrop-blur-md"
+      className=" border-[2px] w-full md:w-4/5 py-3.5 rounded-full shadow-sm hover:shadow-md transition cursor-pointer text-white backdrop-filter backdrop-blur-md"
     >
       <div className="flex flex-row items-center justify-between">
         <div className="w-full ml-6 font-semibold text-left">Any Location</div>
-        <div className="hidden sm:block text-md font-semibold border-x-[1px] text-center w-full">
+        <div className="hidden sm:block text-md font-semibold border-x-[2px] text-center w-full">
           Any Time
         </div>
         <div className="w-full">

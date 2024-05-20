@@ -10,6 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@radix-ui/react-dropdown-menu";
+import { IoIosArrowDown } from "react-icons/io";
 
 const UserMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +22,12 @@ const UserMenu = () => {
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
+        <div className="hidden md:flex text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer flex-row">
+          What is Vagaspace
+          <div className="pl-1 pt-1">
+            <IoIosArrowDown size={16} />
+          </div>
+        </div>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <div

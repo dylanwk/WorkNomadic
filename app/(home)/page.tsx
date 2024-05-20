@@ -3,7 +3,6 @@ import EmptyState from '@/components/EmptyState';
 import Searchbar from '@/components/searchbar/Searchbar';
 import getListings, { IListingParams } from '../api/actions/getListings';
 import ListingCard from '@/components/listings/ListingCard';
-import CategorySkeleton from '@/components/categories/CategorySkeleton';
 import Image from 'next/image';
 import Categories from '@/components/categories/Categories';
 

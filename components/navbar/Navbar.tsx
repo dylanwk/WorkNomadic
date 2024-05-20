@@ -4,8 +4,13 @@ import Image from "next/image";
 import UserMenu from "./UserMenu";
 import Link from "next/link";
 import { LuPalmtree } from "react-icons/lu";
+import NavSearch from "../searchbar/NavSearch";
 
-const Navbar = () => {
+interface NavbarProps {
+  search?: boolean;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ search }) => {
   return (
     <div className="w-full bg-white z-10 shadow-sm">
       <div className="py-4 border-b-[1px]">
@@ -16,7 +21,7 @@ const Navbar = () => {
                 <LuPalmtree size={50} className="pb-1 -mr-3" />
               </Link>
 
-              <Link href={"/"}>
+              <Link href={"/"} className="hidden sm:block">
                 <Image
                   src={"/images/vagaspace2.png"}
                   height={45}
@@ -26,6 +31,7 @@ const Navbar = () => {
                 />
               </Link>
             </div>
+            {search && <NavSearch />}
             <UserMenu />
           </div>
         </Container>
