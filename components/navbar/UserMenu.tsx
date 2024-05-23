@@ -12,22 +12,41 @@ import {
 } from "@radix-ui/react-dropdown-menu";
 import { IoIosArrowDown } from "react-icons/io";
 
-const UserMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface UserMenuInterface {
+  landing?: boolean;
+}
 
-  const toggleOpen = useCallback(() => {
-    setIsOpen((value) => !value);
-  }, []);
-
+const UserMenu: React.FC<UserMenuInterface> = ({ landing }) => {
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
-        <div className="hidden md:flex text-sm font-semibold py-3 px-4 rounded-full hover:bg-neutral-100 transition cursor-pointer flex-row">
-          What is Vagaspace
-          <div className="pl-1 pt-1">
-            <IoIosArrowDown size={16} />
-          </div>
-        </div>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <div
+              className={` ${landing ? "text-white font-bold" : "text-black font-semibold"} hidden md:flex text-sm py-3 px-4 hover:bg-black hover:bg-opacity-5 rounded-full cursor-pointer flex-row transition`}
+            >
+              What is Vagaspace
+              <div className="pl-1 pt-1">
+                <IoIosArrowDown size={16} />
+              </div>
+            </div>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="z-10">
+            <div className="z-10 rounded-xl shadow-md w-40 bg-white overflow-hidden right-0 top-12 text-sm">
+              <div className="z-10 flex flex-col cursor-pointer">
+                <Link href={"/about"}>
+                  <MenuItem onClick={() => {}} label="About Us" />
+                </Link>
+                <Link href={"/blog"}>
+                  <MenuItem label="Blog" />
+                </Link>
+                <Link href={"/contact"}>
+                  <MenuItem label="Contact" />
+                </Link>
+              </div>
+            </div>
+          </DropdownMenuContent>
+        </DropdownMenu>
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <div
@@ -37,7 +56,7 @@ const UserMenu = () => {
               aria-expanded="false"
               className="p-4 md:py-1 md:px-2 border-[1px] border-neutral-200 flex flex-row items-center gap-3 rounded-full cursor-pointer hover:shadow-md transition"
             >
-              <AiOutlineMenu />
+              <AiOutlineMenu color={` ${landing ? "white" : "black"}`} />
               <div className="hidden md:block">
                 <Avatar />
               </div>

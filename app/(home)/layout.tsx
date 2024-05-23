@@ -10,14 +10,14 @@ export default function HomeLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="">
-      <header>
-        <Navbar />
-      </header>
+    <>
+      <div className="relative w-full h-full">
+        <Navbar landing/>
 
-      <div className="min-h-screen pb-10">{children}</div>
+        <main>{children}</main>
+        <Footer />
+      </div>
       <SearchModal />
-      <Footer />
-    </div>
+    </>
   );
 }
