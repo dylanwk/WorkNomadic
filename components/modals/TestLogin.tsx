@@ -57,7 +57,7 @@ const TestLogin = () => {
       <div className="hidden lg:flex items-center justify-center flex-1 bg-white text-black">
         <div className="max-w-md text-center justify-center align-middle">
           <Image
-            src="/images/vagaspace_logo.png"
+            src="/images/vagaspace_logo_circle.png"
             height={47}
             width={47}
             alt="Logo"

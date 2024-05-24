@@ -11,7 +11,7 @@ export default function BlogLayout({
   return (
     <div>
       <header>
-        <Navbar />
+        <Navbar blog />
       </header>
       <div className="min-h-screen">{children}</div>
       <Footer />

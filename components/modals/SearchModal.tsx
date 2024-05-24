@@ -26,15 +26,17 @@ const SearchModal = () => {
   const router = useRouter();
   const params = useSearchParams();
 
-  const [location, setLocation] = useState<CountrySelectValue>();
-  const [step, setStep] = useState(STEPS.LOCATION);
-  const [guestCount, setGuestCount] = useState(1);
-  const [roomCount, setRoomCount] = useState(1);
-  const [bathroomCount, setBathroomCount] = useState(1);
-  const [dateRange, setDateRange] = useState<Range>({
-    startDate: new Date(),
-    endDate: new Date(),
-    key: "selection",
+  const [state, setState] = useState({
+    location: undefined as CountrySelectValue | undefined,
+    step: STEPS.LOCATION,
+    guestCount: 1,
+    roomCount: 1,
+    bathroomCount: 1,
+    dateRange: {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    } as Range,
   });
 
   const Map = useMemo(
@@ -46,15 +48,15 @@ const SearchModal = () => {
   );
 
   const onBack = useCallback(() => {
-    setStep((value) => value - 1);
+    setState((prev) => ({ ...prev, step: prev.step - 1 }));
   }, []);
 
   const onNext = useCallback(() => {
-    setStep((value) => value + 1);
+    setState((prev) => ({ ...prev, step: prev.step + 1 }));
   }, []);
 
   const onSubmit = useCallback(async () => {
-    if (step !== STEPS.INFO) {
+    if (state.step !== STEPS.INFO) {
       return onNext();
     }
 
@@ -66,18 +68,18 @@ const SearchModal = () => {
 
     const updateQuery: any = {
       ...currentQuery,
-      locationValue: location?.value,
-      guestCount,
-      roomCount,
-      bathroomCount,
+      locationValue: state.location?.value,
+      guestCount: state.guestCount,
+      roomCount: state.roomCount,
+      bathroomCount: state.bathroomCount,
     };
 
-    if (dateRange.startDate) {
-      updateQuery.startDate = formatISO(dateRange.startDate);
+    if (state.dateRange.startDate) {
+      updateQuery.startDate = formatISO(state.dateRange.startDate);
     }
 
-    if (dateRange.endDate) {
-      updateQuery.endDate = formatISO(dateRange.endDate);
+    if (state.dateRange.endDate) {
+      updateQuery.endDate = formatISO(state.dateRange.endDate);
     }
 
     const url = qs.stringifyUrl(
@@ -88,36 +90,19 @@ const SearchModal = () => {
       { skipNull: true },
     );
 
-    setStep(STEPS.LOCATION);
+    setState((prev) => ({ ...prev, step: STEPS.LOCATION }));
     searchModal.onClose();
 
     router.push(url);
-  }, [
-    step,
-    searchModal,
-    location,
-    guestCount,
-    roomCount,
-    bathroomCount,
-    router,
-    dateRange,
-    onNext,
-    params,
-  ]);
+  }, [state, searchModal, router, params, onNext]);
 
   const actionLabel = useMemo(() => {
-    if (step === STEPS.INFO) {
-      return "Search";
-    }
-    return "Next";
-  }, [step]);
+    return state.step === STEPS.INFO ? "Search" : "Next";
+  }, [state.step]);
 
   const secondaryActionLabel = useMemo(() => {
-    if (step === STEPS.LOCATION) {
-      return undefined;
-    }
-    return "Back";
-  }, [step]);
+    return state.step === STEPS.LOCATION ? undefined : "Back";
+  }, [state.step]);
 
   let bodyContent = (
     <div className="flex flex-col gap-6">
@@ -127,17 +112,20 @@ const SearchModal = () => {
       />
 
       <CountrySelect
-        value={location}
-        onChange={(value) => {
-          setLocation(value as CountrySelectValue);
-        }}
+        value={state.location}
+        onChange={(value) =>
+          setState((prev) => ({
+            ...prev,
+            location: value as CountrySelectValue,
+          }))
+        }
       />
       <hr />
-      <Map center={location?.latlng} />
+      <Map center={state.location?.latlng} />
     </div>
   );
 
-  if (step === STEPS.DATE) {
+  if (state.step === STEPS.DATE) {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
@@ -145,34 +133,42 @@ const SearchModal = () => {
           subtitle="Make sure everyone is free!"
         />
         <Calendar
-          value={dateRange}
-          onChange={(value) => setDateRange(value.selection)}
+          value={state.dateRange}
+          onChange={(value) =>
+            setState((prev) => ({ ...prev, dateRange: value.selection }))
+          }
         />
       </div>
     );
   }
 
-  if (step === STEPS.INFO) {
+  if (state.step === STEPS.INFO) {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading title="More information" subtitle="Find your perfect place!" />
         <Counter
           title="Guests"
           subtitle="How many guests are coming?"
-          value={guestCount}
-          onChange={(value) => setGuestCount(value)}
+          value={state.guestCount}
+          onChange={(value) =>
+            setState((prev) => ({ ...prev, guestCount: value }))
+          }
         />
         <Counter
           title="Rooms"
           subtitle="How many rooms do you need?"
-          value={roomCount}
-          onChange={(value) => setRoomCount(value)}
+          value={state.roomCount}
+          onChange={(value) =>
+            setState((prev) => ({ ...prev, roomCount: value }))
+          }
         />
         <Counter
           title="Bathrooms"
           subtitle="How many bathrooms do you need?"
-          value={bathroomCount}
-          onChange={(value) => setBathroomCount(value)}
+          value={state.bathroomCount}
+          onChange={(value) =>
+            setState((prev) => ({ ...prev, bathroomCount: value }))
+          }
         />
       </div>
     );
@@ -185,7 +181,7 @@ const SearchModal = () => {
       onSubmit={onSubmit}
       title="Filters"
       actionLabel={actionLabel}
-      secondaryAction={step === STEPS.LOCATION ? undefined : onBack}
+      secondaryAction={state.step === STEPS.LOCATION ? undefined : onBack}
       secondayLabel={secondaryActionLabel}
       body={bodyContent}
     />

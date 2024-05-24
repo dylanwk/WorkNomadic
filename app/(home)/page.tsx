@@ -28,7 +28,7 @@ const Home = async ({ searchParams }: HomeProps) => {
       <section className="relative px-4 py-20 overflow-hidden bg-black sm:py-36 md:py-25 lg:py-28 xl:py-60">
         <div className="absolute inset-0">
           <Image
-            className="object-cover w-full h-full scale-200 object-left opacity-60"
+            className="object-cover w-full h-full scale-200 object-left opacity-70"
             src="/images/rio2.jpg"
             alt="Rio de Janiero"
             fill
@@ -44,8 +44,8 @@ const Home = async ({ searchParams }: HomeProps) => {
 
         <div className="absolute bottom-0 left-0 pb-4 pl-4">
           <h1 className="text-white text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-extrabold tracking-tight leading-none">
-            Tailored to Nomads <br className="hidden xl:block" />
-            Like You.
+            Destinations <br className="hidden xl:block" />
+            Tailored to Nomads.
           </h1>
         </div>
       </section>
