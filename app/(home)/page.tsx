@@ -2,32 +2,39 @@ import Container from '@/components/Container';
 import EmptyState from '@/components/EmptyState';
 import Searchbar from '@/components/searchbar/Searchbar';
 import getListings, { IListingParams } from '../api/actions/getListings';
-import ListingCard from '@/components/listings/ListingCard';
 import Image from 'next/image';
-import Categories from '@/components/categories/Categories';
+import dynamic from 'next/dynamic';
+import CategorySkeleton from '@/components/categories/CategorySkeleton';
+import ListingCardSkeleton from '@/components/listings/ListingCardSkeleton';
 
 interface HomeProps {
   searchParams: IListingParams;
 }
 
+const Categories = dynamic(() => import('@/components/categories/Categories'), {
+  ssr: false,
+  loading: () => <CategorySkeleton />
+});
+const ListingCard = dynamic(() => import('@/components/listings/ListingCard'), {
+  ssr: false,
+  loading: () => <ListingCardSkeleton />
+});
+
 const Home = async ({ searchParams }: HomeProps) => {
   const listings = await getListings(searchParams);
-
-  // TODO: add currentUser funcitonality
-  const currentUser = null;
 
   return (
     <>
       <section className="relative px-4 py-20 overflow-hidden bg-black sm:py-36 md:py-25 lg:py-28 xl:py-60">
         <div className="absolute inset-0">
           <Image
-            className="object-cover w-full h-full scale-200 object-left opacity-75"
+            className="object-cover w-full h-full scale-200 object-left opacity-60"
             src="/images/rio2.jpg"
             alt="Rio de Janiero"
             fill
             sizes="100vw"
-            priority
             quality={100}
+            loading="lazy"
           />
         </div>
 
@@ -51,13 +58,7 @@ const Home = async ({ searchParams }: HomeProps) => {
           <div className="min-h-screen pt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-8">
             {listings &&
               listings.map((listing: any) => {
-                return (
-                  <ListingCard
-                    key={listing.id}
-                    data={listing}
-                    currentUser={currentUser}
-                  />
-                );
+                return <ListingCard key={listing.id} data={listing} />;
               })}
           </div>
         </Container>

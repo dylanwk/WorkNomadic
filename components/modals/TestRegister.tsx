@@ -10,7 +10,7 @@ import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 import Link from "next/link";
-import { LuPalmtree } from "react-icons/lu";
+import Image from "next/image";
 
 const TestRegister = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -57,7 +57,12 @@ const TestRegister = () => {
       {/* <!-- Left Pane --> */}
       <div className="hidden lg:flex items-center justify-center flex-1 bg-white text-black">
         <div className="max-w-md text-center">
-          <LuPalmtree size={50} />
+          <Image
+            src="/images/vagaspace_logo.png"
+            height={47}
+            width={47}
+            alt="Logo"
+          />
         </div>
       </div>
       {/* <!-- Right Pane --> */}

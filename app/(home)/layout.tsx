@@ -12,7 +12,7 @@ export default function HomeLayout({
   return (
     <>
       <div className="relative w-full h-full">
-        <Navbar landing/>
+        <Navbar landing />
 
         <main>{children}</main>
         <Footer />
