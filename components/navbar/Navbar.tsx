@@ -22,7 +22,7 @@ const Navbar: React.FC<NavbarProps> = ({ search, landing, blog }) => {
             <div className="flex flex-row items-center gap-0">
               <Link href={"/"} className="z-10">
                 <Image
-                  src={"/images/vagaspace_logo_circle.png"}
+                  src={"/images/vagaspace_logo.svg"}
                   height={47}
                   width={47}
                   alt="Logo"

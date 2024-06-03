@@ -6,6 +6,8 @@ import useCountries from "@/app/hooks/useCountries";
 import { IconType } from "react-icons/lib";
 import Avatar from "../Avatar";
 import ListingCategory from "./ListingCategory";
+import Offers from "../categories/Offers";
+import LocationCard from "./LocationCard";
 
 const Map = dynamic(() => import("../Map"), {
   ssr: false,
@@ -40,31 +42,31 @@ const ListingInfo: React.FC<ListingInfoProps> = ({
 
   return (
     <div className="col-span-4 flex flex-col gap-8 ">
-      <div className="flex flex-col gap-2">
-        <div className="text-xl font-semibold flex flex-row items-center gap-2">
-          <div>Hosted by Vrbo</div>
-          <Avatar />
-        </div>
-        <div className="flex flex-row items-center gap-4 font-light text-neutral-500">
-          <div>{guestCount} guests</div>
-          <div>{roomCount} rooms </div>
-          <div>{bathroomCount} bathrooms </div>
-        </div>
-      </div>
+      <div className="text-lg font-light text-neutral-500">{description}</div>
+
       <hr />
+      <p className="text-xl font-semibold -mb-2">
+        Users have rated this space as
+      </p>
       {category && (
-        <ListingCategory
-          icon={category.icon}
-          label={category.label}
-          description={category.description || ""}
-        />
+        <>
+          <ListingCategory
+            icon={category.icon}
+            label={category.label}
+            description={category.description || ""}
+          />
+          <ListingCategory
+            icon={category.icon}
+            label={category.label}
+            description={category.description || ""}
+          />
+        </>
       )}
       <hr />
-      <div className="text-lg font-light text-neutral-500">{description}</div>
+      <Offers />
       <hr />
-      <div className="h-[50vh]">
-        <Map center={coordinates} />
-      </div>
+      <LocationCard location={""} locationData={""} />
+      <hr />
     </div>
   );
 };

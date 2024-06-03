@@ -9,22 +9,24 @@ interface ListingHeadProps {
   locationValue: string;
   imageSrc: string;
   id: string;
+  roomCount: number;
+  bathroomCount: number;
+  guestCount: number;
 }
 
 const ListingHead: React.FC<ListingHeadProps> = ({
   title,
   locationValue,
   imageSrc,
+  roomCount,
+  bathroomCount,
+  guestCount,
 }) => {
   const { getByValue } = useCountires();
   const location = getByValue(locationValue);
 
   return (
     <>
-      <Heading
-        title={title}
-        subtitle={`${location?.region}, ${location?.label}`}
-      />
       <div className="w-full h-[65vh] overflow-hidden rounded-xl relative">
         <Image
           alt="Destination Image"
@@ -33,6 +35,11 @@ const ListingHead: React.FC<ListingHeadProps> = ({
           className="object-cover w-full object-bottom"
           loading="lazy"
         />
+      </div>
+      <Heading title={title} />
+      <div className=" -mt-5 flex flex-row items-center gap-3 font-light text-neutral-500">
+        <div>{guestCount} guests</div>•<div>{roomCount} rooms </div>•
+        <div>{bathroomCount} bathrooms </div>
       </div>
     </>
   );

@@ -40,8 +40,8 @@ const Searchbar = () => {
         </div>
       </div>
       <div
-        className="p-3 bg-rose-500 rounded-full block mr-2 -ml-6"
-        style={{ minWidth: "45px", minHeight: "45px" }}
+        className="p-3 bg-primary rounded-full block mr-2 -ml-6"
+        style={{ minWidth: "47px", minHeight: "47px" }}
       >
         <BiSearch size={28} />
       </div>

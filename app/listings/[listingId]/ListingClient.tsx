@@ -1,34 +1,36 @@
 'use client';
 import { categories } from '@/components/categories/Categories';
 import Container from '@/components/Container';
-import Calendar from '@/components/inputs/Calendar';
 import ListingHead from '@/components/listings/ListingHead';
 import ListingInfo from '@/components/listings/ListingInfo';
 import { SafeListing } from '@/lib/types';
-import { Reservation } from '@prisma/client';
-import { eachDayOfInterval } from 'date-fns';
 import React, { useMemo } from 'react';
+import ListingLink from '@/components/listings/ListingLink';
+import dynamic from 'next/dynamic';
+import useCountries from '@/app/hooks/useCountries';
+import { Skeleton } from '@/components/ui/skeleton';
 
-import { DateRange } from 'react-date-range';
-
-const initialDateRange = {
-  startDate: new Date(),
-  endDate: new Date(),
-  key: 'selection'
-};
+const Map = dynamic(() => import('@/components/Map'), {
+  ssr: false,
+  loading: () => <Skeleton className="h-[50vh] w-auto" />
+});
 
 interface ListingClientProps {
-  reservations?: Reservation[];
   listing: SafeListing;
 }
 
-const ListingClient: React.FC<ListingClientProps> = ({
-  listing,
-  reservations = []
-}) => {
+const ListingClient: React.FC<ListingClientProps> = ({ listing }) => {
   const category = useMemo(() => {
     return categories.find((item) => item.label === listing.category);
   }, [listing.category]);
+
+  //#1DA1F2 -> color of external links
+
+  const { getByValue } = useCountries();
+  const coordinates = getByValue(listing.locationValue)?.latlng;
+
+  // placeholder
+  const listingLink = 'https://vrbo.com';
 
   return (
     <Container>
@@ -39,9 +41,11 @@ const ListingClient: React.FC<ListingClientProps> = ({
             imageSrc={listing.imageSrc}
             locationValue={listing.locationValue}
             id={listing.id}
+            roomCount={listing.roomCount}
+            bathroomCount={listing.bathroomCount}
+            guestCount={listing.guestCount}
           />
-          <div className="grid grid-cols-1 md:grid-cols-7 md:gap-10 mt-6 ">
-            {/* potential housing provider name */}
+          <div className="grid grid-cols-1 md:grid-cols-7 md:gap-10 mt-4 ">
             <ListingInfo
               category={category}
               description={listing.description}
@@ -51,13 +55,13 @@ const ListingClient: React.FC<ListingClientProps> = ({
               locationValue={listing.locationValue}
             />
             <div className="order-first mb-10 md:order-last md:col-span-3">
-              <div className="bg-white rounded-xl border-[1px] border-neutral-200 overflow-hidden">
-                <div className="flex flex-row items-center gap-1 p-4">
-                  <div className="text-2xl font-semibold">
-                    $ {listing.price}
-                  </div>
-                  <div className="font-light text-neutral-600"> night</div>
-                </div>
+              <ListingLink
+                price={listing.price}
+                buttonImageSrc={'/images/vrbo.svg'}
+                listingLink={listingLink}
+              />
+              <div className="mt-8 h-[60vh]">
+                <Map center={coordinates} />
               </div>
             </div>
           </div>
