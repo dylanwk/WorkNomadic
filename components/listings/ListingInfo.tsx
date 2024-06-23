@@ -1,71 +1,57 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-import useCountries from "@/app/hooks/useCountries";
-import { IconType } from "react-icons/lib";
-import Avatar from "../Avatar";
-import ListingCategory from "./ListingCategory";
+import { useMemo } from "react";
 import Offers from "../categories/Offers";
 import LocationCard from "./LocationCard";
-
-const Map = dynamic(() => import("../Map"), {
-  ssr: false,
-});
+import { IconType } from "react-icons/lib";
+import ListingCategory from "./ListingCategory";
 
 interface ListingInfoProps {
   description: string;
-  guestCount: number;
-  roomCount: number;
-  bathroomCount: number;
-  category:
-    | {
-        icon: IconType;
-        label: string;
-        description: string;
-      }
-    | undefined;
+  descriptors: { label: string; icon: IconType; description: string }[];
+
   locationValue: string;
+  location: string;
+  amenities: string;
 }
 
 const ListingInfo: React.FC<ListingInfoProps> = ({
   description,
-  guestCount,
-  roomCount,
-  bathroomCount,
-  category,
+  descriptors,
   locationValue,
+  location,
+  amenities,
 }) => {
-  const { getByValue } = useCountries();
-
-  const coordinates = getByValue(locationValue)?.latlng;
+  const parsed_description = description.replace("Description: ", "");
 
   return (
     <div className="col-span-4 flex flex-col gap-8 ">
-      <div className="text-lg font-light text-neutral-500">{description}</div>
+      <div className="text-lg font-light text-neutral-500">
+        {parsed_description}
+      </div>
 
       <hr />
       <p className="text-xl font-semibold -mb-2">
         Users have rated this space as
       </p>
-      {category && (
+      {descriptors && (
         <>
-          <ListingCategory
-            icon={category.icon}
-            label={category.label}
-            description={category.description || ""}
-          />
-          <ListingCategory
-            icon={category.icon}
-            label={category.label}
-            description={category.description || ""}
-          />
+          {descriptors.map((item, index) => (
+            <div key={index}>
+              <ListingCategory
+                icon={item.icon}
+                label={item.label}
+                description={item.description}
+              />
+            </div>
+          ))}
         </>
       )}
       <hr />
-      <Offers />
+      <LocationCard location={location} locationData={locationValue} />
       <hr />
-      <LocationCard location={""} locationData={""} />
+      <Offers amenities={amenities} />
+
       <hr />
     </div>
   );

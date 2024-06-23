@@ -1,6 +1,6 @@
 "use client";
 import useCountires from "@/app/hooks/useCountries";
-import { Listing, Reservation, User } from "@prisma/client";
+import { Listing, User } from "@prisma/client";
 import { useRouter } from "next/navigation";
 import { useCallback, useMemo } from "react";
 import { format } from "date-fns";
@@ -10,7 +10,6 @@ import { Button } from "../ui/button";
 
 interface ListingCard {
   data: Listing;
-  reservation?: Reservation;
   onAction?: (id: string) => void;
   disabled?: boolean;
   actionLabel?: string;
@@ -20,7 +19,6 @@ interface ListingCard {
 
 const ListingCard: React.FC<ListingCard> = ({
   data,
-  reservation,
   onAction,
   disabled,
   actionLabel,
@@ -28,9 +26,6 @@ const ListingCard: React.FC<ListingCard> = ({
   currentUser,
 }) => {
   const router = useRouter();
-  const { getByValue } = useCountires();
-
-  const location = getByValue(data.locationValue);
 
   const handleCancel = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -44,24 +39,6 @@ const ListingCard: React.FC<ListingCard> = ({
     },
     [onAction, actionId, disabled],
   );
-
-  const price = useMemo(() => {
-    if (reservation) {
-      return reservation.totalPrice;
-    }
-
-    return data.price;
-  }, [reservation, data.price]);
-
-  const reservationDate = useMemo(() => {
-    if (!reservation) {
-      return null;
-    }
-    const startDate = new Date(reservation.startDate);
-    const endDate = new Date(reservation.endDate);
-
-    return `${format(startDate, "PP")} - ${format(endDate, "PP")}`;
-  }, [reservation]);
 
   return (
     <div
@@ -80,15 +57,11 @@ const ListingCard: React.FC<ListingCard> = ({
             <HeartButton listingId={data.id} currentUser={currentUser} />
           </div>
         </div>
-        <div className="font-semibold text-lg">
-          {location?.region}, {location?.label}
-        </div>
-        <div className="font-light text-neutral-500 ">
-          {reservationDate || data.category}
-        </div>
+        <div className="font-semibold text-lg">{data.title}</div>
+        <div className="font-light text-neutral-500 ">{data.location}</div>
         <div className="flex flex-row items-center gap-1">
-          <div className="font-semibold ">$ {price}</div>
-          {!reservation && <div className="font-light">night</div>}
+          <div className="font-semibold ">$ {data.price}</div>
+          <div className="font-light">night</div>
         </div>
         {onAction && actionLabel && (
           <Button

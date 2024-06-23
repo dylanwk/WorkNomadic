@@ -14,12 +14,6 @@ const ListingLink: React.FC<ListingCardProps> = ({
   buttonImageSrc,
   listingLink,
 }) => {
-  const style = { color: "#1DA1F2" };
-
-  const handleButtonClick = () => {
-    window.location.href = listingLink;
-  };
-
   return (
     <div className="bg-white rounded-xl border-[1px] border-neutral-200 overflow-hidden">
       <div className="flex flex-col gap-4 p-4">
@@ -30,21 +24,17 @@ const ListingLink: React.FC<ListingCardProps> = ({
         <div>
           <div className="text-xl font-semibold">Interested?</div>
           <div className="text-lg font-light text-neutral-500 flex flex-col items-left gap-2">
-            <div>This space can be found here:</div>
-            <Button
-              className="py-5 w-2/5 flex items-center text-neutral-600"
-              onClick={handleButtonClick}
-              variant="outline"
-              size={"sm"}
-            >
-              <Image
-                src={buttonImageSrc}
-                alt={"button image"}
-                height="25"
-                width="70"
-              />
-              <LuExternalLink size={20} style={style} className="ml-2" />
-            </Button>
+            <div>
+              This space can be found{" "}
+              <a
+                href={`https://${listingLink}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                here
+              </a>
+            </div>
           </div>
         </div>
       </div>

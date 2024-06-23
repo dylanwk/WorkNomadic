@@ -2,35 +2,20 @@ import { db } from '@/lib/db';
 
 export interface IListingParams {
   guestCount?: number;
-  roomCount?: number;
+  bedCount?: number;
   bathroomCount?: number;
-  startDate?: string;
-  endDate?: string;
-  locationValue?: string;
-  category?: string;
+  location?: string;
 }
 
 export default async function getListings(params: IListingParams) {
   try {
-    const {
-      roomCount,
-      guestCount,
-      bathroomCount,
-      startDate,
-      endDate,
-      locationValue,
-      category
-    } = params;
+    const { bedCount, guestCount, bathroomCount, location } = params;
 
     let query: any = {};
 
-    if (category) {
-      query.category = category;
-    }
-
-    if (roomCount) {
-      query.roomCount = {
-        gte: +roomCount
+    if (bedCount) {
+      query.bedCount = {
+        gte: +bedCount
       };
     }
 
@@ -46,8 +31,8 @@ export default async function getListings(params: IListingParams) {
       };
     }
 
-    if (locationValue) {
-      query.locationValue = locationValue;
+    if (location) {
+      query.location = location;
     }
 
     const listings = await db.listing.findMany({
@@ -61,9 +46,8 @@ export default async function getListings(params: IListingParams) {
       ...listing,
       createdAt: listing.createdAt.toISOString()
     }));
-
     return safeListings;
   } catch (error: any) {
-    return;
+    return null;
   }
 }
