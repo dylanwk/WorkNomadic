@@ -26,15 +26,15 @@ const Searchbar = () => {
     >
       <div className="flex flex-row items-center justify-between w-full">
         <div className="flex-1 flex justify-center items-center font-semibold text-left">
-          <span className="w-full text-center">Any Location</span>
+          <span className="w-full text-center">Search Locations</span>
         </div>
         <div className="hidden sm:flex-1 sm:flex justify-center items-center border-x-[2px] text-center">
-          <span className="w-full font-semibold">Any Time</span>
+          <span className="w-full font-semibold">Add Guests</span>
         </div>
         <div className="flex-1 flex justify-center items-center">
           <div className="flex items-center gap-4">
             <span className="hidden sm:inline-block font-semibold text-center">
-              Add Guests
+              Customize
             </span>
           </div>
         </div>

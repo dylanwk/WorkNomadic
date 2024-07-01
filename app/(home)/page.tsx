@@ -25,12 +25,12 @@ const Home = async ({ searchParams }: HomeProps) => {
 
   return (
     <>
-      <section className="relative px-4 py-20 overflow-hidden bg-black sm:py-36 md:py-25 lg:py-28 xl:py-60">
+      <section className="relative px-4 py-20 overflow-hidden bg-black h-4/5 sm:py-36 md:py-25 lg:py-50 xl:py-60">
         <div className="absolute inset-0">
           <Image
-            className="object-cover w-full h-full scale-200 object-left opacity-70"
+            className="object-cover w-full h-full scale-200 object-left opacity-80"
             src="/images/rio2.jpg"
-            alt="Rio de Janiero"
+            alt="Rio de Janeiro"
             fill
             sizes="100vw"
             quality={100}
@@ -38,7 +38,7 @@ const Home = async ({ searchParams }: HomeProps) => {
           />
         </div>
 
-        <div className="flex justify-center align-middle px-4 mx-auto max-w-7xl text-center sm:-mt-4">
+        <div className="flex justify-center items-center h-full px-4 mx-auto max-w-7xl text-center sm:-mt-4">
           <Searchbar />
         </div>
 
@@ -49,6 +49,7 @@ const Home = async ({ searchParams }: HomeProps) => {
           </h1>
         </div>
       </section>
+
       {/* <Categories /> */}
       <Categories />
       {listings && listings.length === 0 ? (

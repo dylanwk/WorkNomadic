@@ -184,7 +184,7 @@ const Offers: React.FC<OffersProps> = ({ amenities }) => {
       .map((amenity) => {
         return categories.find(
           (category) =>
-            category.label.toLowerCase() === amenity.trim().toLowerCase()
+            category.label.toLowerCase() === amenity.trim().toLowerCase(),
         );
       })
       .filter(isDefined);

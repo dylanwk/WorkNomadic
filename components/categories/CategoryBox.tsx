@@ -3,6 +3,7 @@ import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import React, { useCallback } from "react";
 import { IconType } from "react-icons/lib";
 import qs from "query-string";
+import { categories } from "./Categories";
 
 interface CategoryBoxProps {
   icon: IconType;
@@ -26,33 +27,36 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     if (params) {
       currentQuery = qs.parse(params.toString());
     }
-    const updatedQuery: any = {
-      ...currentQuery,
-      category: label,
-    };
-    // delete query if category is already selected
-    if (params?.get("category") === label) {
-      delete updatedQuery.category;
+
+    const currentCategories = params?.get("category")?.split(",");
+
+    if (currentCategories?.includes(label)) {
+      currentCategories.splice(currentCategories.indexOf(label), 1);
+    } else {
+      currentCategories?.push(label);
     }
 
-    let currentUrl = pathname.toString();
+    const updatedQuery: any = {
+      ...currentQuery,
+      category: currentCategories?.join(","),
+    };
 
     const url = qs.stringifyUrl(
       {
-        url: currentUrl,
+        url: pathname,
         query: updatedQuery,
       },
       { skipNull: true },
     );
 
     router.push(url);
-  }, [label, params, router]);
+  }, [label, params, router, pathname]);
 
   return (
     <div
       onClick={handleClick}
       className={`${selected ? "border-b-neutral-800" : "border-transparent"}
-                ${selected ? "text-nuetral-800" : "text-neutral-500"}
+                ${selected ? "text-neutral-800" : "text-neutral-500"}
        flex flex-col items-center justify-center gap-2 p-3 border-b-2 hover:text-neutral-800 transition cursor-pointer`}
     >
       <Icon size={26} />
